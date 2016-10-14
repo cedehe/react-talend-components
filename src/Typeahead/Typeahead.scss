@@ -1,0 +1,74 @@
+.awe-container {
+  position: relative;
+}
+
+.awe-input {
+  width: 240px;
+  height: 30px;
+  box-sizing: content-box;
+  font-style: italic;
+  color: #7531ff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  border-radius: 0;
+}
+
+.awe-containerOpen {
+  .awe-input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.awe-itemsContainer {
+  display: none;
+}
+
+.awe-containerOpen {
+  .awe-itemsContainer {
+    display: block;
+    position: relative;
+    top: -1px;
+    width: 270px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+    max-height: 160px;
+    overflow-y: auto;
+  }
+}
+
+.awe-itemsList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.awe-item {
+  cursor: pointer;
+}
+
+.awe-itemFocused {
+  background-color: #ddd;
+}
+
+.awe-sectionTitle {
+  padding: 10px 0 0 10px;
+  font-size: 12px;
+  color: #777;
+  border-top: 1px dashed #ccc;
+}
+
+.awe-sectionContainer:first-child {
+  .awe-sectionTitle {
+    border-top: 0;
+  }
+}
+
+.awe-highlight {
+  color: #ee0000;
+  font-weight: 400;
+}

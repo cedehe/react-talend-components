@@ -57,6 +57,7 @@
     "jest": "^16.0.1",
     "node-sass": "^3.10.1",
     "react": "^15.3.2",
+    "react-autowhatever": "^7.0.0",
     "react-a11y": "^0.3.3",
     "react-addons-test-utils": "^15.3.2",
     "react-bootstrap": "0",

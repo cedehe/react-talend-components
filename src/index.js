@@ -75,6 +75,7 @@ import Icon from './Icon';
 import Layout from './Layout';
 import List from './List';
 import SidePanel from './SidePanel';
+import Typeahead from './Typeahead';
 
 if (!Object.keys(Icon.registry).length) {
 	Object.keys(icons).forEach((icon) => {
@@ -91,6 +92,7 @@ export {
 	Layout,
 	List,
 	SidePanel,
+	Typeahead,
 
 	Alert,
 	Badge,
