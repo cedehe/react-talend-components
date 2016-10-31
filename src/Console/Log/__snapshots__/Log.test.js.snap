@@ -1,0 +1,44 @@
+exports[`Log should render a log info by default 1`] = `
+<div
+  className="tc-console-log">
+  <p
+    className="tc-console-log-msg tc-console-log-msg-undefined">
+    Hello world, how are you ?
+  </p>
+</div>
+`;
+
+exports[`Log should render a log warning 1`] = `
+<div
+  className="tc-console-log">
+  <p
+    className="tc-console-log-msg tc-console-log-msg-warning">
+    Something goes wrong but can be fixed
+    <div
+      className="tc-actions btn-group">
+      <button
+        className="btn btn-default"
+        disabled={false}
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          className="fa fa-bug" />
+        <span>
+          fixme
+        </span>
+      </button>
+    </div>
+  </p>
+</div>
+`;
+
+exports[`Log should render an error 1`] = `
+<div
+  className="tc-console-log">
+  <p
+    className="tc-console-log-msg tc-console-log-msg-error">
+    Something goes wrong here
+  </p>
+</div>
+`;

@@ -70,6 +70,7 @@ import Action from './Action';
 import Actions from './Actions';
 import AppHeaderBar from './AppHeaderBar';
 import Breadcrumbs from './Breadcrumbs';
+import Console from './Console';
 import Icon from './Icon';
 import Layout from './Layout';
 import List from './List';
@@ -80,6 +81,7 @@ export {
 	Actions,
 	AppHeaderBar,
 	Breadcrumbs,
+	Console,
 	Icon,
 	Layout,
 	List,

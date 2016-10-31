@@ -1,0 +1,45 @@
+exports[`Console should render 1`] = `
+<div
+  className="tc-console">
+  <div
+    className="tc-console-log">
+    <p
+      className="tc-console-log-msg tc-console-log-msg-info">
+      Hello world, how are you ?
+      <div
+        className="tc-actions btn-group" />
+    </p>
+  </div>
+  <div
+    className="tc-console-log">
+    <p
+      className="tc-console-log-msg tc-console-log-msg-error">
+      Something goes wrong here
+      <div
+        className="tc-actions btn-group" />
+    </p>
+  </div>
+  <div
+    className="tc-console-log">
+    <p
+      className="tc-console-log-msg tc-console-log-msg-warning">
+      Something goes wrong but can be fixed
+      <div
+        className="tc-actions btn-group">
+        <button
+          className="btn btn-default"
+          disabled={false}
+          onClick={[Function]}
+          role={null}
+          type="button">
+          <i
+            className="fa fa-bug" />
+          <span>
+            fixme
+          </span>
+        </button>
+      </div>
+    </p>
+  </div>
+</div>
+`;

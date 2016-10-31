@@ -1,0 +1,25 @@
+// Log styles
+
+$tc-console-log-msg-info: #3C763D !default;
+$tc-console-log-msg-warning: #8A6D3B !default;
+$tc-console-log-msg-error: #A94442 !default;
+
+.wrapper {
+	width: 100%;
+}
+
+.msg {
+	margin: 0;
+}
+
+.info {
+	color: $tc-console-log-msg-info;
+}
+
+.warning {
+	color: $tc-console-log-msg-warning;
+}
+
+.error {
+	color: $tc-console-log-msg-error;
+}
