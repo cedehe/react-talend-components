@@ -37,7 +37,7 @@ const largeProps = {
 	},
 };
 
-const children = (<div>My god it so good</div>);
+const children = (<div>BODY content. You can put what ever you want here</div>);
 
 
 storiesOf('Dialog', module)

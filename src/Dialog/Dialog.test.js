@@ -1,11 +1,76 @@
+jest.mock('dom-helpers');
+jest.mock('react-overlays');
+jest.mock('react-dom');
+
 import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Dialog from './Dialog.component';
 
+const defaultProps = {
+	show: true,
+};
+const headerProps = {
+	header: 'Hello world',
+	show: true,
+};
+const actionProps = {
+	show: true,
+	header: 'Hello world',
+	action: {
+		label: 'OK',
+		onClick: jest.fn(),
+	},
+};
+const smallProps = {
+	show: true,
+	header: 'Hello world',
+	size: 'small',
+	action: {
+		label: 'OK',
+		onClick: jest.fn(),
+	},
+};
+const largeProps = {
+	show: true,
+	header: 'Hello world',
+	size: 'large',
+	action: {
+		label: 'OK',
+		onClick: jest.fn(),
+	},
+};
+const children = (<div>BODY</div>);
+
 describe('Dialog', () => {
-	it('should render its name', () => {
-		const wrapper = renderer.create(<Dialog name="Hello world" />).toJSON();
+	it('should render', () => {
+		const wrapper = renderer.create(
+			<Dialog {...defaultProps}>{children}</Dialog>
+		).toJSON();
+		expect(wrapper).toMatchSnapshot();
+	});
+	it('should render header', () => {
+		const wrapper = renderer.create(
+			<Dialog {...headerProps}>{children}</Dialog>
+		).toJSON();
+		expect(wrapper).toMatchSnapshot();
+	});
+	it('should render action', () => {
+		const wrapper = renderer.create(
+			<Dialog {...actionProps}>{children}</Dialog>
+		).toJSON();
+		expect(wrapper).toMatchSnapshot();
+	});
+	it('should render small', () => {
+		const wrapper = renderer.create(
+			<Dialog {...smallProps}>{children}</Dialog>
+		).toJSON();
+		expect(wrapper).toMatchSnapshot();
+	});
+	it('should render large', () => {
+		const wrapper = renderer.create(
+			<Dialog {...largeProps}>{children}</Dialog>
+		).toJSON();
 		expect(wrapper).toMatchSnapshot();
 	});
 });
