@@ -65,6 +65,7 @@ import {
 	Tooltip,
 	Well,
 } from 'react-bootstrap';
+import icons from 'talend-icons/dist/react';
 
 import Action from './Action';
 import Actions from './Actions';
@@ -75,6 +76,12 @@ import Icon from './Icon';
 import Layout from './Layout';
 import List from './List';
 import SidePanel from './SidePanel';
+
+if (!Object.keys(Icon.registry).length) {
+	Object.keys(icons).forEach((icon) => {
+		Icon.register(icon, icons[icon]);
+	});
+}
 
 export {
 	Action,
