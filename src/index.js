@@ -65,22 +65,31 @@ import {
 	Tooltip,
 	Well,
 } from 'react-bootstrap';
+import icons from 'talend-icons/dist/react';
 
 import Action from './Action';
 import Actions from './Actions';
 import AppHeaderBar from './AppHeaderBar';
 import Breadcrumbs from './Breadcrumbs';
+import CircularProgress from './CircularProgress';
 import Dialog from './Dialog';
 import Icon from './Icon';
 import Layout from './Layout';
 import List from './List';
 import SidePanel from './SidePanel';
 
+if (!Object.keys(Icon.registry).length) {
+	Object.keys(icons).forEach((icon) => {
+		Icon.register(icon, icons[icon]);
+	});
+}
+
 export {
 	Action,
 	Actions,
 	AppHeaderBar,
 	Breadcrumbs,
+	CircularProgress,
 	Dialog,
 	Icon,
 	Layout,

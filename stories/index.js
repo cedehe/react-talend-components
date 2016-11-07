@@ -2,6 +2,7 @@ import './Action';
 import './Actions';
 import './AppHeaderBar';
 import './Breadcrumbs';
+import './CircularProgress';
 import './Dialog';
 import './Icon';
 import './Layout';
