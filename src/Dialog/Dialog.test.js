@@ -1,8 +1,29 @@
-jest.mock('dom-helpers');
-jest.mock('react-overlays');
-jest.mock('react-dom');
+import React, { PropTypes } from 'react';
 
-import React from 'react';
+jest.mock('react-dom');
+jest.mock('react-bootstrap', () => {
+	function getFakeComponent(name) {
+		return ({ children, ...rest}) => (<div className={name} {...rest}>{children}</div>);
+	}
+	const Modal = getFakeComponent('Modal');
+	Modal.Header = getFakeComponent('Header');
+	Modal.Title = getFakeComponent('Title');
+	Modal.Body = getFakeComponent('Body');
+	Modal.Footer = getFakeComponent('Footer');
+	const OverlayTrigger = getFakeComponent('OverlayTrigger');
+	OverlayTrigger.propTypes = {};
+	const Tooltip = getFakeComponent('Tooltip');
+	function Button({ children, ...rest }) {
+		return (<button {...rest}>{children}</button>);
+	}
+	return {
+		Button,
+		Modal,
+		OverlayTrigger,
+		Tooltip,
+	};
+});
+
 import renderer from 'react-test-renderer';
 
 import Dialog from './Dialog.component';
