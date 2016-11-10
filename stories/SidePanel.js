@@ -22,8 +22,6 @@ const actions = [
 	},
 ];
 
-
-
 storiesOf('Side Panel', module)
 	.addWithInfo('default', () => {
 		return (
@@ -41,8 +39,8 @@ storiesOf('Side Panel', module)
 			</div>
 		);
 	})
-	.addWithInfo('docked', () => {
-		return (
+	.addWithInfo('docked', () =>
+		(
 			<div>
 				<h1>SidePanel</h1>
 				<h2>Definition</h2>
@@ -55,10 +53,10 @@ storiesOf('Side Panel', module)
 					docked
 				/>
 			</div>
-		);
-	})
-	.addWithInfo('custom icon', () => {
-		return (
+		)
+	)
+	.addWithInfo('custom toggle icon', () =>
+		(
 			<div>
 				<h1>SidePanel</h1>
 				<h2>Definition</h2>
@@ -72,5 +70,5 @@ storiesOf('Side Panel', module)
 					docked
 				/>
 			</div>
-		);
-	});
+		)
+	);
