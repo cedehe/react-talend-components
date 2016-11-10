@@ -8,7 +8,8 @@ exports[`IconsProvider should override talend icons by using defaultIcons props 
   xmlns="http://www.w3.org/2000/svg">
   <symbol
     id="default">
-    <svg id=\"OverrideDefaultIcon\"></svg>
+    <svg
+      id="OverrideDefaultIcon" />
   </symbol>
 </svg>
 `;
@@ -23,11 +24,13 @@ exports[`IconsProvider should override talend icons by using defaultIcons props 
   xmlns="http://www.w3.org/2000/svg">
   <symbol
     id="default">
-    <svg id=\"OverrideDefaultIcon\"></svg>
+    <svg
+      id="OverrideDefaultIcon" />
   </symbol>
   <symbol
     id="custom">
-    <svg id=\"customIcon\"></svg>
+    <svg
+      id="customIcon" />
   </symbol>
 </svg>
 `;
@@ -815,7 +818,8 @@ exports[`IconsProvider should render default talend-icons and custom icons defin
   </symbol>
   <symbol
     id="custom">
-    <svg id=\"customIcon\"></svg>
+    <svg
+      id="customIcon" />
   </symbol>
 </svg>
 `;
