@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Modal } from 'react-bootstrap';
-import Action from '../Action';
+import Action from '../Actions/Action';
 
 /**
  * @param {object} props react props
