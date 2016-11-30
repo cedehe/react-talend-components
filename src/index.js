@@ -65,36 +65,39 @@ import {
 	Tooltip,
 	Well,
 } from 'react-bootstrap';
-import icons from 'talend-icons/dist/react';
 
-import Action from './Action';
-import Actions from './Actions';
+import { Action, ActionDropdown, Actions } from './Actions';
 import AppHeaderBar from './AppHeaderBar';
 import Breadcrumbs from './Breadcrumbs';
 import CircularProgress from './CircularProgress';
 import Dialog from './Dialog';
+import ConfirmDialog from './ConfirmDialog';
+import TreeView from './TreeView';
 import Icon from './Icon';
+import IconsProvider from './IconsProvider';
 import Layout from './Layout';
 import List from './List';
 import SidePanel from './SidePanel';
-
-if (!Object.keys(Icon.registry).length) {
-	Object.keys(icons).forEach((icon) => {
-		Icon.register(icon, icons[icon]);
-	});
-}
+import TooltipTrigger from './TooltipTrigger';
+import Typeahead from './Typeahead';
 
 export {
 	Action,
+	ActionDropdown,
 	Actions,
 	AppHeaderBar,
 	Breadcrumbs,
 	CircularProgress,
 	Dialog,
+	ConfirmDialog,
+	TreeView,
 	Icon,
+	IconsProvider,
 	Layout,
 	List,
 	SidePanel,
+	TooltipTrigger,
+	Typeahead,
 
 	Alert,
 	Badge,

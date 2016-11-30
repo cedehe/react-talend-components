@@ -5,11 +5,14 @@ exports[`SidePanel should render docked menu 1`] = `
     aria-hidden="true"
     className="btn btn-link"
     disabled={false}
+    id={undefined}
     onClick={undefined}
     title="Toggle side panel"
     type="button">
     <i
-      className="fa fa-arrow-left" />
+      aria-hidden="true"
+      className="fa fa-arrow-left"
+      title={null} />
   </button>
   <ul
     className="nav nav-pills nav-inverse nav-stacked tc-side-panel-list">
@@ -18,12 +21,15 @@ exports[`SidePanel should render docked menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Preparations"
         type="button">
         <i
-          className="fa fa-asterisk" />
+          aria-hidden="true"
+          className="fa fa-asterisk"
+          title={null} />
       </button>
     </li>
     <li
@@ -31,12 +37,15 @@ exports[`SidePanel should render docked menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Datasets"
         type="button">
         <i
-          className="fa fa-file-excel-o" />
+          aria-hidden="true"
+          className="fa fa-file-excel-o"
+          title={null} />
       </button>
     </li>
     <li
@@ -44,12 +53,15 @@ exports[`SidePanel should render docked menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Favorites"
         type="button">
         <i
-          className="fa fa-star" />
+          aria-hidden="true"
+          className="fa fa-star"
+          title={null} />
       </button>
     </li>
   </ul>
@@ -63,11 +75,14 @@ exports[`SidePanel should render expanded menu 1`] = `
     aria-hidden="true"
     className="btn btn-link"
     disabled={false}
+    id={undefined}
     onClick={undefined}
     title="Toggle side panel"
     type="button">
     <i
-      className="fa fa-arrow-left" />
+      aria-hidden="true"
+      className="fa fa-arrow-left"
+      title={null} />
   </button>
   <ul
     className="nav nav-pills nav-inverse nav-stacked tc-side-panel-list">
@@ -76,12 +91,15 @@ exports[`SidePanel should render expanded menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Preparations"
         type="button">
         <i
-          className="fa fa-asterisk" />
+          aria-hidden="true"
+          className="fa fa-asterisk"
+          title={null} />
         <span>
           Preparations
         </span>
@@ -92,12 +110,15 @@ exports[`SidePanel should render expanded menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Datasets"
         type="button">
         <i
-          className="fa fa-file-excel-o" />
+          aria-hidden="true"
+          className="fa fa-file-excel-o"
+          title={null} />
         <span>
           Datasets
         </span>
@@ -108,15 +129,88 @@ exports[`SidePanel should render expanded menu 1`] = `
       <button
         className="btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={undefined}
         role="link"
         title="Display Favorites"
         type="button">
         <i
-          className="fa fa-star" />
+          aria-hidden="true"
+          className="fa fa-star"
+          title={null} />
         <span>
           Favorites
         </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`SidePanel should render id when props.id provided 1`] = `
+<nav
+  className="undefined tc-side-panel">
+  <button
+    aria-hidden="true"
+    className="btn btn-link"
+    disabled={false}
+    id="context-toggle-dock"
+    onClick={undefined}
+    title="Toggle side panel"
+    type="button">
+    <i
+      aria-hidden="true"
+      className="fa fa-arrow-left"
+      title={null} />
+  </button>
+  <ul
+    className="nav nav-pills nav-inverse nav-stacked tc-side-panel-list">
+    <li
+      className="tc-side-panel-list-item">
+      <button
+        className="btn btn-link"
+        disabled={false}
+        id="context-nav-preparations"
+        onClick={undefined}
+        role="link"
+        title="Display Preparations"
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-asterisk"
+          title={null} />
+      </button>
+    </li>
+    <li
+      className="tc-side-panel-list-item">
+      <button
+        className="btn btn-link"
+        disabled={false}
+        id="context-nav-datasets"
+        onClick={undefined}
+        role="link"
+        title="Display Datasets"
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-file-excel-o"
+          title={null} />
+      </button>
+    </li>
+    <li
+      className="tc-side-panel-list-item active">
+      <button
+        className="btn btn-link"
+        disabled={false}
+        id="context-nav-favorites"
+        onClick={undefined}
+        role="link"
+        title="Display Favorites"
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-star"
+          title={null} />
       </button>
     </li>
   </ul>

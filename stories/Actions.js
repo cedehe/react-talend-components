@@ -19,6 +19,22 @@ const actions = [
 		label: 'Favorites',
 		icon: 'fa fa-star',
 		onClick: action('Favorites clicked'),
+		inProgress: true,
+	},
+	{
+		displayMode: 'dropdown',
+		label: 'related items',
+		icon: 'fa fa-file-excel-o',
+		items: [
+			{
+				label: 'document 1',
+				onClick: action('document 1 click'),
+			},
+			{
+				label: 'document 2',
+				onClick: action('document 2 click'),
+			},
+		],
 	},
 ];
 storiesOf('Actions', module)

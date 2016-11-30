@@ -1,10 +1,14 @@
 import React from 'react';
 import { MenuItem, Nav, Navbar, ButtonGroup, DropdownButton } from 'react-bootstrap';
+import uuid from 'uuid';
 import SelectDisplayMode from './SelectDisplayMode';
 import SelectSortBy from './SelectSortBy';
+import Pagination from './Pagination';
 import Filter from './Filter';
-import Action from '../../Action';
+import Action from '../../Actions/Action';
 import Icon from '../../Icon';
+
+import theme from './Toolbar.scss';
 
 export function getSubProps(props, component) {
 	const subProps = {};
@@ -25,17 +29,21 @@ function Toolbar(props) {
 	const displayProps = getSubProps(props, SelectDisplayMode);
 	const sortProps = getSubProps(props, SelectSortBy);
 	const filterProps = getSubProps(props, Filter);
+	const paginationProps = getSubProps(props, Pagination);
+	const { id, listActions, onClickAdd } = props;
 	let add;
-	if (props.onClickAdd) {
+	if (onClickAdd) {
 		add = {
+			id: id && `${id}-add-btn`,
 			label: 'Add',
 			icon: 'fa fa-plus',
-			onClick: props.onClickAdd,
+			onClick: onClickAdd,
 		};
 	}
+	const dropdownId = id && `${id}-actions-dropdown`;
 	return (
-		<Navbar componentClass="div" role="toolbar" fluid>
-			{add || props.listActions ? (
+		<Navbar componentClass="div" className={theme['tc-list-toolbar']} role="toolbar" fluid>
+			{add || listActions ? (
 				<Nav>
 					{add ? (<Action
 						className="navbar-btn"
@@ -43,12 +51,18 @@ function Toolbar(props) {
 						{...add}
 					/>) : null}
 					<ButtonGroup className="navbar-btn">
-						{props.listActions ? (
-							<DropdownButton id="tc-list-toolbar-add-dropdown" title="" bsStyle="link">
-								{props.listActions.map((action, index) => {
+						{listActions ? (
+							<DropdownButton
+								id={dropdownId || uuid.v4()}
+								bsStyle="link"
+								title="actions"
+							>
+								{listActions.map((action, index) => {
 									const onClick = e => action.onClick(e, action);
+									const actionIdentifier = id && action.label.toLowerCase().split(' ').join('-');
 									return (
 										<MenuItem
+											id={id && `${id}-${index}-actions-${actionIdentifier}`}
 											key={index}
 											onClick={onClick}
 											eventKey={index}
@@ -63,29 +77,25 @@ function Toolbar(props) {
 					</ButtonGroup>
 				</Nav>
 			) : null}
-			<SelectDisplayMode
-				key="1"
-				{...displayProps}
-			/>
-			<SelectSortBy
-				key="2"
-				{...sortProps}
-			/>
-			<Filter key="3" {...filterProps} />
+			<SelectDisplayMode {...displayProps} />
+			<SelectSortBy {...sortProps} />
+			<Filter {...filterProps} />
+			{
+				Object.keys(paginationProps).length > 1 ?
+					(<Pagination {...paginationProps} />) :
+					null
+			}
 		</Navbar>
 	);
 }
 
-Toolbar.propTypes = Object.assign(
-	{
-		onClickAdd: React.PropTypes.func,
-		listActions: React.PropTypes.arrayOf(
-			React.PropTypes.object
-		),
-	},
-	SelectSortBy.propTypes,
-	SelectDisplayMode.propTypes,
-	Filter.propTypes,
-);
+Toolbar.propTypes = {
+	id: React.PropTypes.string,
+	onClickAdd: React.PropTypes.func,
+	listActions: React.PropTypes.arrayOf(React.PropTypes.object),
+	...Filter.propTypes,
+	...SelectDisplayMode.propTypes,
+	...SelectSortBy.propTypes,
+};
 
 export default Toolbar;

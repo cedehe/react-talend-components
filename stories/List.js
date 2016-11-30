@@ -1,79 +1,129 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import { List } from '../src/index';
+import { List, IconsProvider } from '../src/index';
 
+const selected = [
+	{
+		id: 2,
+		name: 'Foo',
+		created: '2016-09-22',
+		modified: '2016-09-22',
+		author: 'Jean-Pierre DUPONT',
+		icon: 'fa fa-file-pdf-o',
+	}];
 const props = {
-	items: [
-		{
-			id: 1,
-			name: 'Hello world',
-			created: '2016-09-22',
-			modified: '2016-09-22',
-			author: 'Jean-Pierre DUPONT',
-			actions: [{
-				label: 'edit',
-				icon: 'fa fa-edit',
-				onClick: action('onEdit'),
-			}, {
-				label: 'delete',
-				icon: 'fa fa-trash-o',
-				onClick: action('onDelete'),
-			}],
-			icon: 'fa fa-file-excel-o',
-		},
-		{
-			id: 2,
-			name: 'Foo',
-			created: '2016-09-22',
-			modified: '2016-09-22',
-			author: 'Jean-Pierre DUPONT',
-			icon: 'fa fa-file-pdf-o',
-		},
-		{
-			id: 2,
-			name: 'Super long title to trigger overflow on tile rendering',
-			created: '2016-09-22',
-			modified: '2016-09-22',
-			author: 'Jean-Pierre DUPONT with super long name',
-		},
-	],
+	id: 'talend',
 	displayMode: 'table',
-	onClickAdd: action('onClickAdd'),
-	listActions: [
-		{
-			label: 'Delete selection',
-			icon: 'fa fa-trash-o',
-			onClick: action('delete'),
+	list: {
+		titleProps: {
+			key: 'name',
+			iconKey: 'icon',
+			displayModeKey: 'display',
+			onClick: action('onClick'),
+			onCancel: action('onCancel'),
+			onChange: action('onChange'),
 		},
-	],
-	onFilter: action('onFilter'),
-	onSelectSortBy: action('onSelectSortBy'),
-	onSelectDisplayMode: action('onSelectDisplayMode'),
-	sortBy: [
-		{ id: 'id', name: 'Id' },
-		{ id: 'name', name: 'Name', selected: true },
-	],
-	columns: [
-		{ key: 'id', label: 'Id' },
-		{ key: 'name', label: 'Name' },
-		{ key: 'author', label: 'Author' },
-		{ key: 'created', label: 'Created' },
-		{ key: 'modified', label: 'Modified' },
-	],
-	titleKey: 'name',
-	iconKey: 'icon',
-	onTitleClick: action('onClick'),
-	onElementSelect: action('onSelect'),
+		columns: [
+			{ key: 'id', label: 'Id' },
+			{ key: 'name', label: 'Name' },
+			{ key: 'author', label: 'Author' },
+			{ key: 'created', label: 'Created' },
+			{ key: 'modified', label: 'Modified' },
+		],
+		items: [
+			{
+				id: 1,
+				name: 'Title with actions',
+				created: '2016-09-22',
+				modified: '2016-09-22',
+				author: 'Jean-Pierre DUPONT',
+				actions: [{
+					label: 'edit',
+					icon: 'talend-edit',
+					onClick: action('onEdit'),
+				}, {
+					label: 'delete',
+					icon: 'talend-delete',
+					onClick: action('onDelete'),
+				}, {
+					displayMode: 'dropdown',
+					label: 'related items',
+					icon: 'talend-folder',
+					items: [
+						{
+							label: 'document 1',
+							onClick: action('document 1 click'),
+						},
+						{
+							label: 'document 2',
+							onClick: action('document 2 click'),
+						},
+					],
+				}],
+				icon: 'fa fa-file-excel-o',
+				display: 'text',
+			},
+			{
+				id: 2,
+				name: 'Title in input mode',
+				created: '2016-09-22',
+				modified: '2016-09-22',
+				author: 'Jean-Pierre DUPONT',
+				icon: 'fa fa-file-pdf-o',
+				display: 'input',
+			},
+			{
+				id: 2,
+				name: 'Super long title to trigger overflow on tile rendering',
+				created: '2016-09-22',
+				modified: '2016-09-22',
+				author: 'Jean-Pierre DUPONT with super long name',
+			},
+		],
+		onElementSelect: action('onSelect'),
+		onToggleAll: action('onToggleAll'),
+		onToggleSingle: action('onToggleSingle'),
+		ifSelected: (item) => {
+			let found = false;
+			for (let i = 0; i < selected.length; i += 1) {
+				if (selected[i].id === item.id) {
+					found = true;
+					break;
+				}
+			}
+			return found;
+		},
+	},
+	toolbar: {
+		onClickAdd: action('onClickAdd'),
+		listActions: [
+			{
+				label: 'Delete selection',
+				icon: 'talend-delete',
+				onClick: action('delete'),
+			},
+		],
+		onFilter: action('onFilter'),
+		onSelectDisplayMode: action('onSelectDisplayMode'),
+		sortBy: [
+			{ id: 'id', name: 'Id' },
+			{ id: 'name', name: 'Name', selected: true },
+		],
+		onSelectSortBy: action('onSelectSortBy'),
+		itemsLength: 3,
+		onChangePagination: action('onChangePagination'),
+	},
 };
 
 storiesOf('List', module)
-	.add('default', () => (
+	.add('table (default)', () => (
 		<div>
 			<h1>List</h1>
 			<h2>Definition</h2>
 			<p>Display a list by defining your.</p>
 			<h2>Examples</h2>
+			<IconsProvider />
 			<List {...props} />
 		</div>
 	))
@@ -84,6 +134,7 @@ storiesOf('List', module)
 			<div>
 				<h1>List</h1>
 				<p>Display the list in large mode</p>
+				<IconsProvider />
 				<List {...eprops} />
 			</div>
 		);
@@ -95,6 +146,7 @@ storiesOf('List', module)
 			<div>
 				<h1>List</h1>
 				<p>Display the list in tile mode</p>
+				<IconsProvider />
 				<List {...tprops} />
 			</div>
 		);

@@ -69,6 +69,7 @@ const sidePanel = (<SidePanel
 	actions={actions}
 	onToggleDock={action('Toggle dock clicked')}
 	docked={false}
+	toggleIcon={ 'fa fa-arrow-left' }
 />);
 const header = {
 	app: 'Example App Name',
@@ -76,6 +77,14 @@ const header = {
 
 storiesOf('Layout', module)
 	.addWithInfo('OneColumn', () => (
+		<Layout
+			header={header}
+			mode="OneColumn"
+		>
+			<h1>Hello world</h1>
+		</Layout>
+	))
+	.addWithInfo('OneColumn with scroll', () => (
 		<Layout
 			header={header}
 			mode="OneColumn"
@@ -89,6 +98,15 @@ storiesOf('Layout', module)
 			mode="TwoColumns"
 			one={sidePanel}
 		>
+			<h1>Hello world</h1>
+		</Layout>
+	))
+	.addWithInfo('TwoColumns with scroll', () => (
+		<Layout
+			header={header}
+			mode="TwoColumns"
+			one={sidePanel}
+		>
 			{content}
 		</Layout>
 	))
@@ -97,6 +115,7 @@ storiesOf('Layout', module)
 			actions={actions}
 			onToggleDock={action('Toggle dock clicked')}
 			docked
+			toggleIcon={ 'fa fa-arrow-left' }
 		/>);
 
 		return (

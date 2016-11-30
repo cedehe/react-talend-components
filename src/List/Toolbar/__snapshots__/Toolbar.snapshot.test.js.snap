@@ -12,7 +12,7 @@ exports[`Toolbar should render 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-display-mode"
+        htmlFor={undefined}
         onSelect={null}>
         Display:
       </label>
@@ -24,7 +24,7 @@ exports[`Toolbar should render 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-display-mode"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -37,7 +37,7 @@ exports[`Toolbar should render 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-display-mode"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -46,6 +46,7 @@ exports[`Toolbar should render 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -64,6 +65,7 @@ exports[`Toolbar should render 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -82,6 +84,7 @@ exports[`Toolbar should render 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -105,7 +108,7 @@ exports[`Toolbar should render 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-sort-by"
+        htmlFor={undefined}
         onSelect={null}>
         Sort by:
       </label>
@@ -117,7 +120,7 @@ exports[`Toolbar should render 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-sort-by"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -127,7 +130,7 @@ exports[`Toolbar should render 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-sort-by"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -136,6 +139,7 @@ exports[`Toolbar should render 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -149,6 +153,7 @@ exports[`Toolbar should render 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -161,16 +166,13 @@ exports[`Toolbar should render 1`] = `
       <button
         activeHref={undefined}
         activeKey={undefined}
-        className="navbar-btn btn btn-link"
+        className="navbar-btn btn btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={[Function]}
         onSelect={null}
         role="button"
         type="button">
-        <i
-          aria-hidden="true"
-          className="fa fa-sort-desc"
-          title={null} />
         DESCENDING
       </button>
     </ul>
@@ -185,6 +187,7 @@ exports[`Toolbar should render 1`] = `
           <input
             aria-label="Filter"
             className="form-control"
+            id={undefined}
             onChange={[Function]}
             placeholder="Filter"
             type="search" />
@@ -192,6 +195,7 @@ exports[`Toolbar should render 1`] = `
         <button
           className="btn btn-link"
           disabled={false}
+          id={undefined}
           title="Filter"
           type="submit">
           <i
@@ -204,6 +208,151 @@ exports[`Toolbar should render 1`] = `
         </button>
       </div>
     </form>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor={undefined}
+        onSelect={null}>
+        Show:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id={42}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          5
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby={42}
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              5
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              10
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              20
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              50
+            </a>
+          </li>
+        </ul>
+      </li>
+      <div
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn-group"
+        onSelect={null}>
+        <button
+          className="btn btn-link"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-backward"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <span
+          className="btn btn-link">
+          1
+          /
+          4
+        </span>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-forward"
+            title={null} />
+        </button>
+      </div>
+    </ul>
   </div>
 </div>
 `;
@@ -218,16 +367,15 @@ exports[`Toolbar should render add btn 1`] = `
       className="nav navbar-nav"
       role={null}>
       <button
-        activeHref={undefined}
-        activeKey={undefined}
         className="navbar-btn btn btn-success"
         disabled={false}
         onClick={[Function]}
-        onSelect={null}
         role={null}
         type="button">
         <i
-          className="fa fa-plus" />
+          aria-hidden="true"
+          className="fa fa-plus"
+          title={null} />
         <span>
           Add
         </span>
@@ -247,7 +395,7 @@ exports[`Toolbar should render add btn 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-display-mode"
+        htmlFor={undefined}
         onSelect={null}>
         Display:
       </label>
@@ -259,7 +407,7 @@ exports[`Toolbar should render add btn 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-display-mode"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -272,7 +420,7 @@ exports[`Toolbar should render add btn 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-display-mode"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -281,6 +429,7 @@ exports[`Toolbar should render add btn 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -299,6 +448,7 @@ exports[`Toolbar should render add btn 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -317,6 +467,7 @@ exports[`Toolbar should render add btn 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -340,7 +491,7 @@ exports[`Toolbar should render add btn 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-sort-by"
+        htmlFor={undefined}
         onSelect={null}>
         Sort by:
       </label>
@@ -352,7 +503,7 @@ exports[`Toolbar should render add btn 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-sort-by"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -362,7 +513,7 @@ exports[`Toolbar should render add btn 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-sort-by"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -371,6 +522,7 @@ exports[`Toolbar should render add btn 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -384,6 +536,7 @@ exports[`Toolbar should render add btn 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -396,16 +549,13 @@ exports[`Toolbar should render add btn 1`] = `
       <button
         activeHref={undefined}
         activeKey={undefined}
-        className="navbar-btn btn btn-link"
+        className="navbar-btn btn btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={[Function]}
         onSelect={null}
         role="button"
         type="button">
-        <i
-          aria-hidden="true"
-          className="fa fa-sort-desc"
-          title={null} />
         DESCENDING
       </button>
     </ul>
@@ -420,6 +570,7 @@ exports[`Toolbar should render add btn 1`] = `
           <input
             aria-label="Filter"
             className="form-control"
+            id={undefined}
             onChange={[Function]}
             placeholder="Filter"
             type="search" />
@@ -427,6 +578,7 @@ exports[`Toolbar should render add btn 1`] = `
         <button
           className="btn btn-link"
           disabled={false}
+          id={undefined}
           title="Filter"
           type="submit">
           <i
@@ -439,6 +591,577 @@ exports[`Toolbar should render add btn 1`] = `
         </button>
       </div>
     </form>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor={undefined}
+        onSelect={null}>
+        Show:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id={42}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          5
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby={42}
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              5
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              10
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              20
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              50
+            </a>
+          </li>
+        </ul>
+      </li>
+      <div
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn-group"
+        onSelect={null}>
+        <button
+          className="btn btn-link"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-backward"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <span
+          className="btn btn-link">
+          1
+          /
+          4
+        </span>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-forward"
+            title={null} />
+        </button>
+      </div>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Toolbar should render id if provided 1`] = `
+<div
+  className="navbar navbar-default"
+  role="toolbar">
+  <div
+    className="container-fluid">
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <button
+        className="navbar-btn btn btn-success"
+        disabled={false}
+        id="toolbar-add-btn"
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-plus"
+          title={null} />
+        <span>
+          Add
+        </span>
+      </button>
+      <div
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn-group"
+        onSelect={null}>
+        <div
+          className="dropdown btn-group btn-group-link">
+          <button
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle btn btn-link"
+            disabled={false}
+            id="toolbar-actions-dropdown"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            type="button">
+            actions
+             
+            <span
+              className="caret" />
+          </button>
+          <ul
+            aria-labelledby="toolbar-actions-dropdown"
+            className="dropdown-menu"
+            role="menu">
+            <li
+              className=""
+              role="presentation"
+              style={undefined}>
+              <a
+                href=""
+                id="toolbar-0-actions-delete-selection"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="-1">
+                <i
+                  aria-hidden="true"
+                  className="fa fa-trash-o"
+                  title={null} />
+                Delete selection
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ul>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor="toolbar-display-mode"
+        onSelect={null}>
+        Display:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id="toolbar-display-mode"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-bars"
+            title={null} />
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby="toolbar-display-mode"
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="toolbar-display-mode-table"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              <i
+                aria-hidden="true"
+                className="fa fa-bars"
+                title={null} />
+               
+              Table
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="toolbar-display-mode-large"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              <i
+                aria-hidden="true"
+                className="fa fa-list-alt"
+                title={null} />
+               
+              Expanded
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="toolbar-display-mode-tile"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              <i
+                aria-hidden="true"
+                className="fa fa-th-large"
+                title={null} />
+               
+              Tile
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor="toolbar-sort-by"
+        onSelect={null}>
+        Sort by:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id="toolbar-sort-by"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          Name
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby="toolbar-sort-by"
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="toolbar-sort-by-item-Name"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              Name
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="toolbar-sort-by-item-Name"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              Name
+            </a>
+          </li>
+        </ul>
+      </li>
+      <button
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn btn btn-link"
+        disabled={false}
+        id="toolbar-sort-order"
+        onClick={[Function]}
+        onSelect={null}
+        role="button"
+        type="button">
+        DESCENDING
+      </button>
+    </ul>
+    <form
+      className="navbar-form navbar-right"
+      onSubmit={[Function]}
+      role="search">
+      <div
+        className="form-group">
+        <div
+          className="input-group">
+          <input
+            aria-label="Filter"
+            className="form-control"
+            id="toolbar-filter-input"
+            onChange={[Function]}
+            placeholder="Filter"
+            type="search" />
+        </div>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id="toolbar-filter-submit"
+          title="Filter"
+          type="submit">
+          <i
+            aria-hidden="true"
+            className="fa fa-search" />
+          <span
+            className="sr-only">
+            Filter
+          </span>
+        </button>
+      </div>
+    </form>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor="toolbar-pagination-size"
+        onSelect={null}>
+        Show:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id="toolbar-pagination-size"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          5
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby="toolbar-pagination-size"
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              5
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              10
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              20
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              50
+            </a>
+          </li>
+        </ul>
+      </li>
+      <div
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn-group"
+        onSelect={null}>
+        <button
+          className="btn btn-link"
+          disabled={true}
+          id="toolbar-nav-to-first"
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-backward"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
+          disabled={true}
+          id="toolbar-nav-to-prev"
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <span
+          className="btn btn-link">
+          1
+          /
+          4
+        </span>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id="toolbar-nav-to-next"
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id="toolbar-nav-to-last"
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-forward"
+            title={null} />
+        </button>
+      </div>
+    </ul>
   </div>
 </div>
 `;
@@ -465,17 +1188,18 @@ exports[`Toolbar should render listActions 1`] = `
             aria-haspopup={true}
             className="dropdown-toggle btn btn-link"
             disabled={false}
-            id="tc-list-toolbar-add-dropdown"
+            id={42}
             onClick={[Function]}
             onKeyDown={[Function]}
             role="button"
             type="button">
+            actions
              
             <span
               className="caret" />
           </button>
           <ul
-            aria-labelledby="tc-list-toolbar-add-dropdown"
+            aria-labelledby={42}
             className="dropdown-menu"
             role="menu">
             <li
@@ -484,6 +1208,7 @@ exports[`Toolbar should render listActions 1`] = `
               style={undefined}>
               <a
                 href=""
+                id={undefined}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
@@ -507,7 +1232,7 @@ exports[`Toolbar should render listActions 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-display-mode"
+        htmlFor={undefined}
         onSelect={null}>
         Display:
       </label>
@@ -519,7 +1244,7 @@ exports[`Toolbar should render listActions 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-display-mode"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -532,7 +1257,7 @@ exports[`Toolbar should render listActions 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-display-mode"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -541,6 +1266,7 @@ exports[`Toolbar should render listActions 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -559,6 +1285,7 @@ exports[`Toolbar should render listActions 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -577,6 +1304,7 @@ exports[`Toolbar should render listActions 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -600,7 +1328,7 @@ exports[`Toolbar should render listActions 1`] = `
         activeHref={undefined}
         activeKey={undefined}
         className="navbar-text"
-        htmlFor="tc-list-toolbar-sort-by"
+        htmlFor={undefined}
         onSelect={null}>
         Sort by:
       </label>
@@ -612,7 +1340,7 @@ exports[`Toolbar should render listActions 1`] = `
           aria-haspopup={true}
           className="dropdown-toggle"
           href=""
-          id="tc-list-toolbar-sort-by"
+          id={42}
           onClick={[Function]}
           onKeyDown={[Function]}
           role="button">
@@ -622,7 +1350,7 @@ exports[`Toolbar should render listActions 1`] = `
             className="caret" />
         </a>
         <ul
-          aria-labelledby="tc-list-toolbar-sort-by"
+          aria-labelledby={42}
           className="dropdown-menu"
           role="menu">
           <li
@@ -631,6 +1359,7 @@ exports[`Toolbar should render listActions 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -644,6 +1373,7 @@ exports[`Toolbar should render listActions 1`] = `
             style={undefined}>
             <a
               href=""
+              id={undefined}
               onClick={[Function]}
               onKeyDown={[Function]}
               role="menuitem"
@@ -656,16 +1386,13 @@ exports[`Toolbar should render listActions 1`] = `
       <button
         activeHref={undefined}
         activeKey={undefined}
-        className="navbar-btn btn btn-link"
+        className="navbar-btn btn btn btn-link"
         disabled={false}
+        id={undefined}
         onClick={[Function]}
         onSelect={null}
         role="button"
         type="button">
-        <i
-          aria-hidden="true"
-          className="fa fa-sort-desc"
-          title={null} />
         DESCENDING
       </button>
     </ul>
@@ -680,6 +1407,7 @@ exports[`Toolbar should render listActions 1`] = `
           <input
             aria-label="Filter"
             className="form-control"
+            id={undefined}
             onChange={[Function]}
             placeholder="Filter"
             type="search" />
@@ -687,6 +1415,7 @@ exports[`Toolbar should render listActions 1`] = `
         <button
           className="btn btn-link"
           disabled={false}
+          id={undefined}
           title="Filter"
           type="submit">
           <i
@@ -699,6 +1428,151 @@ exports[`Toolbar should render listActions 1`] = `
         </button>
       </div>
     </form>
+    <ul
+      className="nav navbar-nav"
+      role={null}>
+      <label
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-text"
+        htmlFor={undefined}
+        onSelect={null}>
+        Show:
+      </label>
+      <li
+        className="dropdown"
+        style={undefined}>
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle"
+          href=""
+          id={42}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          role="button">
+          5
+           
+          <span
+            className="caret" />
+        </a>
+        <ul
+          aria-labelledby={42}
+          className="dropdown-menu"
+          role="menu">
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              5
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              10
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              20
+            </a>
+          </li>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="menuitem"
+              tabIndex="-1">
+              50
+            </a>
+          </li>
+        </ul>
+      </li>
+      <div
+        active={undefined}
+        activeHref={undefined}
+        activeKey={undefined}
+        className="navbar-btn btn-group"
+        onSelect={null}>
+        <button
+          className="btn btn-link"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-backward"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
+          disabled={true}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <span
+          className="btn btn-link">
+          1
+          /
+          4
+        </span>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-play"
+            title={null} />
+        </button>
+        <button
+          className="btn btn-link"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button">
+          <i
+            aria-hidden="true"
+            className="fa fa-forward"
+            title={null} />
+        </button>
+      </div>
+    </ul>
   </div>
 </div>
 `;

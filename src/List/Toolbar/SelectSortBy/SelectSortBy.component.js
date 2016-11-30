@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Button, Nav, NavDropdown, MenuItem } from 'react-bootstrap';
-import Icon from '../../../Icon';
+import uuid from 'uuid';
+
+import theme from './SelectSortBy.scss';
 
 /**
  * @param {object} props react props
@@ -35,20 +37,32 @@ function SelectSortBy(props) {
 			);
 		}
 	};
+	const sortById = props.id && `${props.id}-sort-by`;
 	return (
-		<Nav>
-			<label className="navbar-text" htmlFor="tc-list-toolbar-sort-by">Sort by:</label>
+		<Nav className={theme['tc-list-toolbar-sort-by']}>
+			<label className="navbar-text" htmlFor={sortById}>Sort by:</label>
 			<NavDropdown
+				id={sortById || uuid.v4()}
 				title={selected ? selected.name : 'N.C'}
-				id="tc-list-toolbar-sort-by"
 				onSelect={onSelectSortBy}
 			>
 				{props.sortBy.map((sortBy, index) => (
-					<MenuItem key={index} eventKey={sortBy}>{sortBy.name}</MenuItem>
+					<MenuItem
+						id={props.id && `${props.id}-sort-by-item-${sortBy.name}`}
+						key={index}
+						eventKey={sortBy}
+					>
+						{sortBy.name}
+					</MenuItem>
 				))}
 			</NavDropdown>
-			<Button className="navbar-btn" bsStyle="link" role="button" onClick={toggleSortOrder}>
-				<Icon name={props.sortDesc ? 'fa-sort-desc' : 'fa-sort-asc'} />
+			<Button
+				id={props.id && `${props.id}-sort-order`}
+				className="navbar-btn btn"
+				bsStyle="link"
+				role="button"
+				onClick={toggleSortOrder}
+			>
 				{props.sortDesc ? 'DESCENDING' : 'ASCENDING'}
 			</Button>
 		</Nav>
@@ -56,6 +70,8 @@ function SelectSortBy(props) {
 }
 
 SelectSortBy.propTypes = {
+	id: PropTypes.string,
+	onSelectSortBy: PropTypes.func,
 	sortBy: PropTypes.arrayOf(
 		PropTypes.shape({
 			id: PropTypes.string,
@@ -63,7 +79,6 @@ SelectSortBy.propTypes = {
 			selected: PropTypes.bool,
 		})
 	),
-	onSelectSortBy: PropTypes.func,
 	sortDesc: PropTypes.bool,
 };
 
