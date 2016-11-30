@@ -1,0 +1,46 @@
+exports[`Footerbar should render 3 actions 1`] = `
+<ul
+  className="nav"
+  role={null}>
+  <ul
+    active={undefined}
+    className="pull-left nav"
+    role={null}>
+    <button
+      className="btn btn-default"
+      disabled={false}
+      onClick={[Function]}
+      role={null}
+      type="button">
+      <span>
+        close
+      </span>
+    </button>
+  </ul>
+  <ul
+    active={undefined}
+    className="pull-right nav"
+    role={null}>
+    <button
+      className="btn btn-default"
+      disabled={false}
+      onClick={[Function]}
+      role={null}
+      type="button">
+      <span>
+        save and add another
+      </span>
+    </button>
+    <button
+      className="btn btn-info"
+      disabled={false}
+      onClick={[Function]}
+      role={null}
+      type="button">
+      <span>
+        save
+      </span>
+    </button>
+  </ul>
+</ul>
+`;
