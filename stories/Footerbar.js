@@ -27,7 +27,7 @@ storiesOf('Footerbar', module)
 				but is placed below forms, panels or dialogs.
 				<a href="http://guidelines.talend.com/document/92132#/navigation-layout/toolbars/action-bar">Spec</a>
 			</p>
-			<h2>examples</h2>
+			<h2>Examples</h2>
 			<div style={{ width: '600px' }}>
 				<Footerbar {...footerbar} />
 			</div>
