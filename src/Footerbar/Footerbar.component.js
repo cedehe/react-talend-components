@@ -14,7 +14,7 @@ function Footerbar({ main, secondary, cancel }) {
 			) : null}
 			<Nav className="pull-right">
 				{secondary ? (
-					<Action {...Object.assign({ bsStyle: 'secondary' }, secondary)} />
+					<Action {...Object.assign({ bsStyle: 'default' }, secondary)} />
 				) : null}
 				<Action className={theme['tc-footerbar-btn']} {...Object.assign({ bsStyle: 'info' }, main)} />
 			</Nav>
