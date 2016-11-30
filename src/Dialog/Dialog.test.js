@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 jest.mock('react-dom');
 jest.mock('react-bootstrap', () => {
 	function getFakeComponent(name) {
-		return ({ children, ...rest}) => (<div className={name} {...rest}>{children}</div>);
+		return ({ children, ...rest }) => (<div className={name} {...rest}>{children}</div>);
 	}
 	const Modal = getFakeComponent('Modal');
 	Modal.Header = getFakeComponent('Header');
