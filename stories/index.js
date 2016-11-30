@@ -5,6 +5,7 @@ import './AppHeaderBar';
 import './Breadcrumbs';
 import './CircularProgress';
 import './ConfirmDialog'
+import './Footerbar';
 import './Icon';
 import './Layout';
 import './List';
