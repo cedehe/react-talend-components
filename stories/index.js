@@ -4,7 +4,8 @@ import './Actions';
 import './AppHeaderBar';
 import './Breadcrumbs';
 import './CircularProgress';
-import './ConfirmDialog'
+import './ConfirmDialog';
+import './Drawer';
 import './TreeView';
 import './Icon';
 import './Layout';

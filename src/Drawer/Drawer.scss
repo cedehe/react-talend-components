@@ -1,0 +1,68 @@
+.tc-drawer {
+	position: fixed;
+	z-index: 16;
+	box-sizing: border-box;
+	overflow: auto;
+	transition: transform 0.2s ease-out;
+
+	&-top {
+
+		top: 0;
+		right: 0;
+		left: 0;
+
+		&-open {
+			transform: none;
+			box-shadow: 5px 5px 5px #888;
+		}
+
+		&-close {
+			transform: translateY(-100%);
+		}
+	}
+
+	&-right {
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		&-open {
+			transform: none;
+			box-shadow: -5px 5px 5px #888;
+		}
+
+		&-close {
+			transform: translateX(100%);
+		}
+	}
+
+	&-bottom {
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		&-open {
+			transform: none;
+			box-shadow: -5px -5px 5px #888;
+		}
+
+		&-close {
+			transform: translateY(100%);
+		}
+	}
+
+	&-left {
+		top: 0;
+		bottom: 0;
+		left: 0;
+
+		&-open {
+			transform: none;
+			box-shadow: 5px 5px 5px #888;
+		}
+
+		&-close {
+			transform: translateX(-100%);
+		}
+	}
+}
