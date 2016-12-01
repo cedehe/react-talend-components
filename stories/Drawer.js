@@ -1,18 +1,15 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
-import { storiesOf, action } from '@kadira/storybook';
+import { storiesOf } from '@kadira/storybook';
 
-import { Drawer, Action } from '../src/index';
+import { Drawer, IconsProvider } from '../src/index';
 
 const props = {
 	open: true,
-	position: 'bottom',
+	position: 'right',
 	size: 320,
+	title: 'Drawer Title',
 };
-const headerStyle = {
-	backgroundColor: '#3DB0D6',
-	borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
-};
+
 storiesOf('Drawer', module)
 	.addWithInfo('default', () =>
 		(<div>
@@ -20,10 +17,11 @@ storiesOf('Drawer', module)
 			<h2>Description</h2>
 			<p>description</p>
 			<h2>Examples</h2>
+			<IconsProvider />
 			<Drawer {...props} >
-				<Nav style={headerStyle}>
-
-				</Nav>
+				<section style={{ padding: 20 }}>
+					<div>Drawer Contents</div>
+				</section>
 			</Drawer>
 		</div>)
 	);

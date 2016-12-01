@@ -2,7 +2,6 @@
 	position: fixed;
 	z-index: 16;
 	box-sizing: border-box;
-	overflow: auto;
 	transition: transform 0.2s ease-out;
 
 	&-top {
@@ -29,6 +28,7 @@
 		&-open {
 			transform: none;
 			box-shadow: -5px 5px 5px #888;
+			overflow-y: auto;
 		}
 
 		&-close {
@@ -59,6 +59,7 @@
 		&-open {
 			transform: none;
 			box-shadow: 5px 5px 5px #888;
+			overflow-y: auto;
 		}
 
 		&-close {
