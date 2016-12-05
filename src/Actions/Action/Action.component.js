@@ -3,6 +3,7 @@ import {
 	Button,
 	OverlayTrigger,
 } from 'react-bootstrap';
+import classnames from 'classnames';
 import TooltipTrigger from '../../TooltipTrigger';
 import CircularProgress from '../../CircularProgress';
 import Icon from '../../Icon';
@@ -36,7 +37,7 @@ function Action(props) {
 		} = props;
 
 	const buttonProps = getPropsFrom(Button, rest);
-	const style = link ? 'link' : bsStyle;
+	const style = classnames(link && 'link', !link && bsStyle, hideLabel && 'btn-icon-only');
 	const rClick = event => onClick(event, {
 		action: { label, ...rest },
 		model,
