@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
-import { Input } from '../src/index';
+import { SelectionInput } from '../src/index';
 
 const getOnChangeHandler = event =>
 	action('input changed')(event.target.checked);
@@ -22,39 +22,39 @@ const radiobuttonProps = {
 };
 
 
-storiesOf('Input', module)
+storiesOf('SelectionInput', module)
 	.addWithInfo('default', () => (
 		<div>
-			<h1>Input</h1>
+			<h1>SelectionInput</h1>
 			<h3>Definition</h3>
 			<p>
 				A view component to display radio-buttons or checkboxes.
 			</p>
 			<h3>No props provided except onchange handler: </h3>
-			<Input {...defaultProps} />
+			<SelectionInput {...defaultProps} />
 		</div>
 	))
 	.addWithInfo('checkbox', () => (
 		<div>
-			<h1>Input</h1>
+			<h1>SelectionInput</h1>
 			<h3>Definition</h3>
 			<p>
 				A view component to display radio-buttons or checkboxes.
 			</p>
 			<h3>Checkbox: </h3>
-			<Input {...checkboxProps} />
+			<SelectionInput {...checkboxProps} />
 		</div>
 	))
 	.addWithInfo('radio', () => (
 		<div>
-			<h1>Input</h1>
+			<h1>SelectionInput</h1>
 			<h3>Definition</h3>
 			<p>
 				A view component to display radio-buttons or checkboxes.
 			</p>
 			<h3>Radio-button: </h3>
 			<form>
-				<Input {...radiobuttonProps} />
+				<SelectionInput {...radiobuttonProps} />
 				<button type="reset">reset</button>
 			</form>
 		</div>

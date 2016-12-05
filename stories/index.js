@@ -8,7 +8,7 @@ import './CircularProgress';
 import './ConfirmDialog';
 import './TreeView';
 import './Icon';
-import './Input';
+import './SelectionInput';
 import './Layout';
 import './List';
 import './SidePanel';

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Input from './Input.component';
+import SelectionInput from './SelectionInput.component';
 
 jest.mock('react-dom');
 
@@ -24,12 +24,12 @@ const radiobuttonProps = {
 
 describe('Input', () => {
 	it('should render checkbox', () => {
-		const wrapper = renderer.create(<Input {...checkboxProps} />).toJSON();
+		const wrapper = renderer.create(<SelectionInput {...checkboxProps} />).toJSON();
 		expect(wrapper).toMatchSnapshot();
 	});
 
 	it('should render radio-button', () => {
-		const wrapper = renderer.create(<Input {...radiobuttonProps} />).toJSON();
+		const wrapper = renderer.create(<SelectionInput {...radiobuttonProps} />).toJSON();
 		expect(wrapper).toMatchSnapshot();
 	});
 });
