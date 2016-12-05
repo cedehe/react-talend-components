@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 import Action from '../../Actions/Action';
 import Icon from '../../Icon';
-import getClassNames from '../getClassNames';
+import getClassNames from '../../utils/getClassNames';
 
 import theme from './TreeViewItem.scss';
 

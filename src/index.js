@@ -74,6 +74,7 @@ import CircularProgress from './CircularProgress';
 import ConfirmDialog from './ConfirmDialog';
 import TreeView from './TreeView';
 import Icon from './Icon';
+import Input from './Input';
 import IconsProvider from './IconsProvider';
 import Layout from './Layout';
 import List from './List';
@@ -93,6 +94,7 @@ export {
 	TreeView,
 	Icon,
 	IconsProvider,
+	Input,
 	Layout,
 	List,
 	SidePanel,

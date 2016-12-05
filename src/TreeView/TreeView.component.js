@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import Action from '../Actions/Action';
 
 import TreeViewItem from './TreeViewItem/';
-import getClassNames from './getClassNames';
+import getClassNames from '../utils/getClassNames';
 import theme from './TreeView.scss';
 
 const getClassName = getClassNames(theme);
