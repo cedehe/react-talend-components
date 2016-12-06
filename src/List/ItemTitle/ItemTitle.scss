@@ -1,0 +1,22 @@
+$tc-list-title-icon-size: 2em !default;
+
+.container {
+	display: inline;
+
+	> * {
+		vertical-align: middle;
+	}
+
+	.icon {
+		width: $tc-list-title-icon-size;
+		height: $tc-list-title-icon-size;
+
+		&::before {
+			font-size: $tc-list-title-icon-size;
+		}
+	}
+
+	.input {
+		margin: 8px 15px;
+	}
+}
