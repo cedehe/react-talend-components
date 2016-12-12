@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/lib/Navbar';
+
 import SelectDisplayMode from './SelectDisplayMode';
 import SelectSortBy from './SelectSortBy';
 import Pagination from './Pagination';
 import Filter from './Filter';
+import Label from './Label';
 import ActionBar from '../../ActionBar';
 
 import theme from './Toolbar.scss';
@@ -72,10 +74,13 @@ function Toolbar(props) {
 		<div>
 			{hasActionBarProps && (<ActionBar {...actionBarProps} />)}
 			<Navbar componentClass="div" className={theme['tc-list-toolbar']} role="toolbar" fluid>
-				{hasDisplayModeProps && (<SelectDisplayMode {...displayModeProps} />)}
+				{hasDisplayModeProps && (<Label text="Display:" htmlFor={id && `${id}-display-mode`} />)}
+				{hasDisplayModeProps && (<SelectDisplayMode {...displayProps} />)}
+				{hasSortProps && (<Label text="Sort by:" htmlFor={id && `${id}-sort-by`} />)}
 				{hasSortProps && (<SelectSortBy {...sortProps} />)}
-				{hasFilterProps && (<Filter {...filterProps} />)}
+				{hasPaginationProps && (<Label text="Show:" htmlFor={id && `${id}-pagination-size`} />)}
 				{hasPaginationProps && (<Pagination {...paginationProps} />)}
+				{hasFilterProps && (<Filter {...filterProps} />)}
 			</Navbar>
 		</div>
 	);
@@ -84,9 +89,10 @@ function Toolbar(props) {
 Toolbar.propTypes = {
 	id: React.PropTypes.string,
 	...ActionBar.propTypes,
-	...Filter.propTypes,
 	...SelectDisplayMode.propTypes,
 	...SelectSortBy.propTypes,
+	...Pagination.propTypes,
+	...Filter.propTypes,
 };
 
 export default Toolbar;

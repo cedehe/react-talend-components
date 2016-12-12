@@ -1,0 +1,31 @@
+exports[`Label should render 1`] = `
+<p
+  className="navbar-text">
+  <label
+    className="navbar-text"
+    htmlFor={undefined}
+    style={
+      Object {
+        "margin": 0,
+      }
+    }>
+    Text:
+  </label>
+</p>
+`;
+
+exports[`Label should render for if provided 1`] = `
+<p
+  className="navbar-text">
+  <label
+    className="navbar-text"
+    htmlFor="id"
+    style={
+      Object {
+        "margin": 0,
+      }
+    }>
+    Text:
+  </label>
+</p>
+`;
