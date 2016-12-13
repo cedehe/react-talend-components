@@ -80,18 +80,22 @@ exports[`Toolbar should render display mode selector 1`] = `
     role="toolbar">
     <div
       className="container-fluid">
+      <p
+        className="navbar-text">
+        <label
+          className="navbar-text"
+          htmlFor="my-toolbar-display-mode"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }>
+          Display:
+        </label>
+      </p>
       <ul
         className="nav navbar-nav"
         role={null}>
-        <label
-          active={undefined}
-          activeHref={undefined}
-          activeKey={undefined}
-          className="navbar-text"
-          htmlFor="my-toolbar-display-mode"
-          onSelect={null}>
-          Display:
-        </label>
         <li
           className="dropdown"
           style={undefined}>
@@ -131,7 +135,6 @@ exports[`Toolbar should render display mode selector 1`] = `
                   aria-hidden="true"
                   className="fa fa-bars"
                   title={null} />
-                 
                 Table
               </a>
             </li>
@@ -150,7 +153,6 @@ exports[`Toolbar should render display mode selector 1`] = `
                   aria-hidden="true"
                   className="fa fa-list-alt"
                   title={null} />
-                 
                 Expanded
               </a>
             </li>
@@ -169,7 +171,6 @@ exports[`Toolbar should render display mode selector 1`] = `
                   aria-hidden="true"
                   className="fa fa-th-large"
                   title={null} />
-                 
                 Tile
               </a>
             </li>
@@ -244,18 +245,22 @@ exports[`Toolbar should render pagination 1`] = `
     role="toolbar">
     <div
       className="container-fluid">
+      <p
+        className="navbar-text">
+        <label
+          className="navbar-text"
+          htmlFor="my-toolbar-pagination-size"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }>
+          Show:
+        </label>
+      </p>
       <ul
         className="nav navbar-nav"
         role={null}>
-        <label
-          active={undefined}
-          activeHref={undefined}
-          activeKey={undefined}
-          className="navbar-text"
-          htmlFor="my-toolbar-pagination-size"
-          onSelect={null}>
-          Show:
-        </label>
         <li
           className="dropdown"
           style={undefined}>
@@ -331,63 +336,104 @@ exports[`Toolbar should render pagination 1`] = `
             </li>
           </ul>
         </li>
-        <div
-          active={undefined}
-          activeHref={undefined}
-          activeKey={undefined}
-          className="navbar-btn btn-group"
-          onSelect={null}>
-          <button
-            className="btn btn-link"
-            disabled={false}
+        <li
+          className="btn btn-link"
+          role="presentation"
+          style={
+            Object {
+              "padding": 0,
+            }
+          }>
+          <a
+            href=""
             id="my-toolbar-nav-to-first"
             onClick={[Function]}
-            type="button">
+            role="button">
             <i
               aria-hidden="true"
               className="fa fa-backward"
               title={null} />
-          </button>
-          <button
-            className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
-            disabled={false}
+          </a>
+        </li>
+        <li
+          className="btn btn-link tc-pagination-ctrl-prev"
+          role="presentation"
+          style={
+            Object {
+              "padding": 0,
+            }
+          }>
+          <a
+            href=""
             id="my-toolbar-nav-to-prev"
             onClick={[Function]}
-            type="button">
+            role="button">
             <i
               aria-hidden="true"
               className="fa fa-play"
               title={null} />
-          </button>
-          <span
-            className="btn btn-link">
-            6
-            /
-            2
-          </span>
-          <button
-            className="btn btn-link"
-            disabled={false}
+          </a>
+        </li>
+        <li
+          className="disabled"
+          role="presentation"
+          style={undefined}>
+          <a
+            href=""
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "pointerEvents": "none",
+              }
+            }
+            tabIndex={-1}>
+            <span
+              className="btn-link">
+              6
+              /
+              2
+            </span>
+          </a>
+        </li>
+        <li
+          className="btn btn-link"
+          role="presentation"
+          style={
+            Object {
+              "padding": 0,
+            }
+          }>
+          <a
+            href=""
             id="my-toolbar-nav-to-next"
             onClick={[Function]}
-            type="button">
+            role="button">
             <i
               aria-hidden="true"
               className="fa fa-play"
               title={null} />
-          </button>
-          <button
-            className="btn btn-link"
-            disabled={false}
+          </a>
+        </li>
+        <li
+          className="btn btn-link"
+          role="presentation"
+          style={
+            Object {
+              "padding": 0,
+            }
+          }>
+          <a
+            href=""
             id="my-toolbar-nav-to-last"
             onClick={[Function]}
-            type="button">
+            role="button">
             <i
               aria-hidden="true"
               className="fa fa-forward"
               title={null} />
-          </button>
-        </div>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -401,18 +447,22 @@ exports[`Toolbar should render sort selector 1`] = `
     role="toolbar">
     <div
       className="container-fluid">
+      <p
+        className="navbar-text">
+        <label
+          className="navbar-text"
+          htmlFor="my-toolbar-sort-by"
+          style={
+            Object {
+              "margin": 0,
+            }
+          }>
+          Sort by:
+        </label>
+      </p>
       <ul
         className="nav navbar-nav"
         role={null}>
-        <label
-          active={undefined}
-          activeHref={undefined}
-          activeKey={undefined}
-          className="navbar-text"
-          htmlFor="my-toolbar-sort-by"
-          onSelect={null}>
-          Sort by:
-        </label>
         <li
           className="dropdown"
           style={undefined}>
@@ -464,18 +514,18 @@ exports[`Toolbar should render sort selector 1`] = `
             </li>
           </ul>
         </li>
-        <button
-          activeHref={undefined}
-          activeKey={undefined}
-          className="navbar-btn btn btn btn-link"
-          disabled={false}
-          id="my-toolbar-sort-order"
-          onClick={[Function]}
-          onSelect={null}
-          role="button"
-          type="button">
-          DESCENDING
-        </button>
+        <li
+          className=""
+          role="presentation"
+          style={undefined}>
+          <a
+            href=""
+            id="my-toolbar-sort-order"
+            onClick={[Function]}
+            role="button">
+            DESCENDING
+          </a>
+        </li>
       </ul>
     </div>
   </div>

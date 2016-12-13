@@ -58,18 +58,22 @@ exports[`List should render 1`] = `
       role="toolbar">
       <div
         className="container-fluid">
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor={undefined}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Display:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor={undefined}
-            onSelect={null}>
-            Display:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -109,7 +113,6 @@ exports[`List should render 1`] = `
                     aria-hidden="true"
                     className="fa fa-bars"
                     title={null} />
-                   
                   Table
                 </a>
               </li>
@@ -128,7 +131,6 @@ exports[`List should render 1`] = `
                     aria-hidden="true"
                     className="fa fa-list-alt"
                     title={null} />
-                   
                   Expanded
                 </a>
               </li>
@@ -147,25 +149,28 @@ exports[`List should render 1`] = `
                     aria-hidden="true"
                     className="fa fa-th-large"
                     title={null} />
-                   
                   Tile
                 </a>
               </li>
             </ul>
           </li>
         </ul>
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor={undefined}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Sort by:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor={undefined}
-            onSelect={null}>
-            Sort by:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -217,64 +222,35 @@ exports[`List should render 1`] = `
               </li>
             </ul>
           </li>
-          <button
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-btn btn btn btn-link"
-            disabled={false}
-            id={undefined}
-            onClick={[Function]}
-            onSelect={null}
-            role="button"
-            type="button">
-            ASCENDING
-          </button>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id={undefined}
+              onClick={[Function]}
+              role="button">
+              ASCENDING
+            </a>
+          </li>
         </ul>
-        <form
-          className="navbar-form navbar-right"
-          onSubmit={[Function]}
-          role="search">
-          <div
-            className="form-group">
-            <input
-              aria-label="Filter"
-              className="form-control"
-              id={undefined}
-              onChange={[Function]}
-              placeholder="Filter"
-              type="search" />
-            <button
-              className="btn btn-link"
-              disabled={false}
-              id={undefined}
-              title="Filter"
-              type="submit">
-              <svg
-                aria-hidden="true"
-                className="tc-svg-icon"
-                title={null}>
-                <use
-                  xlinkHref="#talend-search" />
-              </svg>
-              <span
-                className="sr-only">
-                Filter
-              </span>
-            </button>
-          </div>
-        </form>
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor={undefined}
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Show:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor={undefined}
-            onSelect={null}>
-            Show:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -350,64 +326,138 @@ exports[`List should render 1`] = `
               </li>
             </ul>
           </li>
-          <div
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-btn btn-group"
-            onSelect={null}>
-            <button
-              className="btn btn-link"
-              disabled={false}
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id={undefined}
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-backward"
                 title={null} />
-            </button>
-            <button
-              className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="btn btn-link tc-pagination-ctrl-prev"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id={undefined}
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-play"
                 title={null} />
-            </button>
-            <span
-              className="btn btn-link">
-              6
-              /
-              2
-            </span>
-            <button
-              className="btn btn-link"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="disabled"
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}>
+              <span
+                className="btn-link">
+                6
+                /
+                2
+              </span>
+            </a>
+          </li>
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id={undefined}
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-play"
                 title={null} />
-            </button>
-            <button
-              className="btn btn-link"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id={undefined}
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-forward"
                 title={null} />
+            </a>
+          </li>
+        </ul>
+        <form
+          className="navbar-form navbar-right"
+          onSubmit={[Function]}
+          role="search">
+          <div
+            className="form-group">
+            <input
+              aria-label="Filter"
+              className="form-control"
+              id={undefined}
+              onChange={[Function]}
+              placeholder="Filter"
+              type="search" />
+            <button
+              className="btn btn-link"
+              disabled={false}
+              id={undefined}
+              title="Filter"
+              type="submit">
+              <svg
+                aria-hidden="true"
+                className="tc-svg-icon"
+                title={null}>
+                <use
+                  xlinkHref="#talend-search" />
+              </svg>
+              <span
+                className="sr-only">
+                Filter
+              </span>
             </button>
           </div>
-        </ul>
+        </form>
       </div>
     </div>
   </div>
@@ -468,18 +518,22 @@ exports[`List should render id if provided 1`] = `
       role="toolbar">
       <div
         className="container-fluid">
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor="context-display-mode"
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Display:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor="context-display-mode"
-            onSelect={null}>
-            Display:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -519,7 +573,6 @@ exports[`List should render id if provided 1`] = `
                     aria-hidden="true"
                     className="fa fa-bars"
                     title={null} />
-                   
                   Table
                 </a>
               </li>
@@ -538,7 +591,6 @@ exports[`List should render id if provided 1`] = `
                     aria-hidden="true"
                     className="fa fa-list-alt"
                     title={null} />
-                   
                   Expanded
                 </a>
               </li>
@@ -557,25 +609,28 @@ exports[`List should render id if provided 1`] = `
                     aria-hidden="true"
                     className="fa fa-th-large"
                     title={null} />
-                   
                   Tile
                 </a>
               </li>
             </ul>
           </li>
         </ul>
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor="context-sort-by"
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Sort by:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor="context-sort-by"
-            onSelect={null}>
-            Sort by:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -627,64 +682,35 @@ exports[`List should render id if provided 1`] = `
               </li>
             </ul>
           </li>
-          <button
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-btn btn btn btn-link"
-            disabled={false}
-            id="context-sort-order"
-            onClick={[Function]}
-            onSelect={null}
-            role="button"
-            type="button">
-            ASCENDING
-          </button>
+          <li
+            className=""
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              id="context-sort-order"
+              onClick={[Function]}
+              role="button">
+              ASCENDING
+            </a>
+          </li>
         </ul>
-        <form
-          className="navbar-form navbar-right"
-          onSubmit={[Function]}
-          role="search">
-          <div
-            className="form-group">
-            <input
-              aria-label="Filter"
-              className="form-control"
-              id="context-filter-input"
-              onChange={[Function]}
-              placeholder="Filter"
-              type="search" />
-            <button
-              className="btn btn-link"
-              disabled={false}
-              id="context-filter-submit"
-              title="Filter"
-              type="submit">
-              <svg
-                aria-hidden="true"
-                className="tc-svg-icon"
-                title={null}>
-                <use
-                  xlinkHref="#talend-search" />
-              </svg>
-              <span
-                className="sr-only">
-                Filter
-              </span>
-            </button>
-          </div>
-        </form>
+        <p
+          className="navbar-text">
+          <label
+            className="navbar-text"
+            htmlFor="context-pagination-size"
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Show:
+          </label>
+        </p>
         <ul
           className="nav navbar-nav"
           role={null}>
-          <label
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-text"
-            htmlFor="context-pagination-size"
-            onSelect={null}>
-            Show:
-          </label>
           <li
             className="dropdown"
             style={undefined}>
@@ -760,64 +786,138 @@ exports[`List should render id if provided 1`] = `
               </li>
             </ul>
           </li>
-          <div
-            active={undefined}
-            activeHref={undefined}
-            activeKey={undefined}
-            className="navbar-btn btn-group"
-            onSelect={null}>
-            <button
-              className="btn btn-link"
-              disabled={false}
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id="context-nav-to-first"
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-backward"
                 title={null} />
-            </button>
-            <button
-              className="btn btn-link tc-pagination-ctrl-prev btn btn-link tc-pagination-ctrl-prev-default"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="btn btn-link tc-pagination-ctrl-prev"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id="context-nav-to-prev"
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-play"
                 title={null} />
-            </button>
-            <span
-              className="btn btn-link">
-              6
-              /
-              2
-            </span>
-            <button
-              className="btn btn-link"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="disabled"
+            role="presentation"
+            style={undefined}>
+            <a
+              href=""
+              onClick={[Function]}
+              role="button"
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              tabIndex={-1}>
+              <span
+                className="btn-link">
+                6
+                /
+                2
+              </span>
+            </a>
+          </li>
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id="context-nav-to-next"
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-play"
                 title={null} />
-            </button>
-            <button
-              className="btn btn-link"
-              disabled={false}
+            </a>
+          </li>
+          <li
+            className="btn btn-link"
+            role="presentation"
+            style={
+              Object {
+                "padding": 0,
+              }
+            }>
+            <a
+              href=""
               id="context-nav-to-last"
               onClick={[Function]}
-              type="button">
+              role="button">
               <i
                 aria-hidden="true"
                 className="fa fa-forward"
                 title={null} />
+            </a>
+          </li>
+        </ul>
+        <form
+          className="navbar-form navbar-right"
+          onSubmit={[Function]}
+          role="search">
+          <div
+            className="form-group">
+            <input
+              aria-label="Filter"
+              className="form-control"
+              id="context-filter-input"
+              onChange={[Function]}
+              placeholder="Filter"
+              type="search" />
+            <button
+              className="btn btn-link"
+              disabled={false}
+              id="context-filter-submit"
+              title="Filter"
+              type="submit">
+              <svg
+                aria-hidden="true"
+                className="tc-svg-icon"
+                title={null}>
+                <use
+                  xlinkHref="#talend-search" />
+              </svg>
+              <span
+                className="sr-only">
+                Filter
+              </span>
             </button>
           </div>
-        </ul>
+        </form>
       </div>
     </div>
   </div>

@@ -48,6 +48,7 @@ function Toolbar(props) {
 	const sortProps = getSubProps(props, SelectSortBy);
 	const filterProps = getSubProps(props, Filter);
 	const paginationProps = getSubProps(props, Pagination);
+	const id = props.id;
 
 	const hasActionBarProps = hasProps(actionBarProps);
 	const hasDisplayModeProps = hasProps(displayModeProps);
@@ -55,17 +56,17 @@ function Toolbar(props) {
 	const hasFilterProps = hasProps(filterProps);
 	const hasPaginationProps = hasProps(paginationProps);
 
-	if (props.id && hasActionBarProps) {
+	if (id && hasActionBarProps) {
 		if (actionBarProps.actions) {
 			actionBarProps.actions = {
-				left: adaptActionsIds(actionBarProps.actions.left, props.id),
-				right: adaptActionsIds(actionBarProps.actions.right, props.id),
+				left: adaptActionsIds(actionBarProps.actions.left, id),
+				right: adaptActionsIds(actionBarProps.actions.right, id),
 			};
 		}
 		if (actionBarProps.multiSelectActions) {
 			actionBarProps.multiSelectActions = {
-				left: adaptActionsIds(actionBarProps.multiSelectActions.left, props.id),
-				right: adaptActionsIds(actionBarProps.multiSelectActions.right, props.id),
+				left: adaptActionsIds(actionBarProps.multiSelectActions.left, id),
+				right: adaptActionsIds(actionBarProps.multiSelectActions.right, id),
 			};
 		}
 	}
