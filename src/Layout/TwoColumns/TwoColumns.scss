@@ -19,6 +19,7 @@ $tc-layout-two-columns-sidemenu-bg: $brand-primary !default;
 	:global(.nav-pills) :global(.btn-link) {
 		color: #FFF;
 		width: 100%;
+		padding: 12px 90px 12px 20px;
 	}
 
 	:global(.btn-link):hover {

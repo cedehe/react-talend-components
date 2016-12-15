@@ -30,7 +30,7 @@ $tc-side-panel-docked-spacing: 15px !default;
 		display: block;
 		padding: 0;
 		margin: $tc-side-panel-spacing 0;
-		line-height: 0.75;
+		line-height: 0.5;
 		color: $tc-side-panel-toggle-color;
 		box-shadow: -2px 0 0 $tc-side-panel-toggle-color;
 
@@ -38,7 +38,9 @@ $tc-side-panel-docked-spacing: 15px !default;
 			fill: $tc-side-panel-toggle-color;
 		}
 
-		&:hover,
+		&:hover{
+			background-color: inherit;
+		},
 		&:focus,
 		&:active {
 			color: inherit;
@@ -65,7 +67,7 @@ $tc-side-panel-docked-spacing: 15px !default;
 
 	.link {
 		text-align: left;
-		font-size: 1.2em;
+		font-size: 14px;
 		text-transform: uppercase;
 
 		i + span,
