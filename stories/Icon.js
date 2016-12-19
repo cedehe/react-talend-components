@@ -60,15 +60,15 @@ storiesOf('Icon', module)
 	.addWithInfo('svg transform', () => (
 		<div>
 			<IconsProvider />
-			<p>Here we are changing the icon talend-add</p>
+			<p>Here we are changing the icon talend-apache</p>
 			<ul>
-				<li><Icon name="talend-apache" /> : <strong>talend-apache</strong></li>
-				<li><Icon name="talend-apache" transform="spin" /> : <strong>talend-apache spin</strong></li>
-				<li><Icon name="talend-apache" transform="rotate-90" /> : <strong>talend-apache rotate-90</strong></li>
-				<li><Icon name="talend-apache" transform="rotate-180" /> : <strong>talend-apache rotate-180</strong></li>
-				<li><Icon name="talend-apache" transform="rotate-270" /> : <strong>talend-apache rotate-270</strong></li>
-				<li><Icon name="talend-apache" transform="flip-horizontal" /> : <strong>talend-apache flip-horizontal</strong></li>
-				<li><Icon name="talend-apache" transform="flip-vertical" /> : <strong>talend-apache flip-vertical</strong></li>
+				<li><Icon name="talend-apache" /></li>
+				<li><Icon name="talend-apache" transform="spin" /> : <strong>spin</strong></li>
+				<li><Icon name="talend-apache" transform="rotate-90" /> : <strong>rotate-90</strong></li>
+				<li><Icon name="talend-apache" transform="rotate-180" /> : <strong>rotate-180</strong></li>
+				<li><Icon name="talend-apache" transform="rotate-270" /> : <strong>rotate-270</strong></li>
+				<li><Icon name="talend-apache" transform="flip-horizontal" /> : <strong>flip-horizontal</strong></li>
+				<li><Icon name="talend-apache" transform="flip-vertical" /> : <strong>flip-vertical</strong></li>
 			</ul>
 		</div>
 	));
