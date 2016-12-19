@@ -43,14 +43,14 @@ function ActionSplitDropdown(props) {
 
 	const Title = (
 		<span>
-			{icon && <Icon name={icon}/>}
+			{icon ? (<Icon name={icon} />) : null}
 			<span>{label}</span>
 		</span>
 	);
 
 	return (
 		<SplitButton
-			onClick={(event) => rClick(event, onClick, { label, ...rest }, model) }
+			onClick={event => rClick(event, onClick, { label, ...rest }, model)}
 			title={Title}
 			{...rest}
 		>
