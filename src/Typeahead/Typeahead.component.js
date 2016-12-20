@@ -3,7 +3,12 @@ import uuid from 'uuid';
 import classNames from 'classnames';
 import Autowhatever from 'react-autowhatever';
 import theme from './Typeahead.scss';
-import { renderItem, renderInputComponent, renderSectionTitle } from './subRenderers';
+import {
+	renderItemsContainer,
+	renderInputComponent,
+	renderSectionTitle,
+	renderItem,
+} from './Typeahead.component.renderers';
 import { Action } from '../Actions';
 
 /**
@@ -28,9 +33,7 @@ function Typeahead({ onToggle, icon, position, ...rest }) {
 
 	const containerClass = classNames(
 		theme['tc-typeahead-container'],
-		{
-			[`${theme['right-container']}`]: position === 'right',
-		}
+		(position === 'right') && theme.right,
 	);
 
 	const autowhateverProps = {
@@ -40,6 +43,7 @@ function Typeahead({ onToggle, icon, position, ...rest }) {
 			placeholder: rest.placeholder,
 			onBlur: rest.onBlur,
 			onChange: rest.onChange && (event => rest.onChange(event, { value: event.target.value })),
+			onKeyDown: rest.onKeyDown,
 			debounceMinLength: rest.debounceMinLength,
 			debounceTimeout: rest.debounceTimeout,
 			icon,
@@ -47,21 +51,27 @@ function Typeahead({ onToggle, icon, position, ...rest }) {
 		itemProps: {
 			onClick: rest.onSelect,
 		},
-		renderItem,
 		renderInputComponent,
-		multiSection: true,
+		renderItemsContainer: renderItemsContainer(
+			rest.items, rest.noResultText, rest.searching, rest.searchingText),
 		renderSectionTitle,
+		renderItem,
+		multiSection: true,
 		getSectionItems: section => section.suggestions,
 		theme: {
+			...rest.theme,
 			container: containerClass,
 			containerOpen: theme['container-open'],
 			highlight: theme['highlight-match'],
 			input: theme['typeahead-input'],
 			itemFocused: theme['item-focused'],
 			itemsContainer: theme['items-container'],
-			itemsList: theme['items-list'],
+			itemsList: theme.items,
 			sectionContainer: theme['section-container'],
 		},
+		focusedSectionIndex: rest.focusedSectionIndex,
+		focusedItemIndex: rest.focusedItemIndex,
+		items: rest.items || [],
 		renderItemData: { value: rest.value },
 	};
 
@@ -73,7 +83,10 @@ function Typeahead({ onToggle, icon, position, ...rest }) {
 Typeahead.defaultProps = {
 	id: uuid.v4(),
 	position: 'left',
-	items: [],
+	items: null,
+	noResultText: 'No result.',
+	searching: false,
+	searchingText: 'Searching for matches…',
 };
 
 Typeahead.propTypes = {
@@ -90,6 +103,9 @@ Typeahead.propTypes = {
 	onBlur: PropTypes.func,
 	onChange: PropTypes.func,
 	onSelect: PropTypes.func,
+	onKeyDown: PropTypes.func,
+	focusedSectionIndex: PropTypes.number,
+	focusedItemIndex: PropTypes.number,
 	items: PropTypes.arrayOf(
 		PropTypes.shape({
 			title: PropTypes.string,
@@ -102,6 +118,9 @@ Typeahead.propTypes = {
 			),
 		}),
 	),
+	noResultText: PropTypes.string,
+	searching: PropTypes.bool,
+	searchingText: PropTypes.string,
 	debounceMinLength: PropTypes.number,
 	debounceTimeout: PropTypes.number,
 };
