@@ -9,7 +9,7 @@ import theme from './DisplayTable.scss';
 
 function RowRenderer(props) {
 	const { id, item, itemProps, titleProps } = props;
-	const { classNameKey, onToggle, isSelected, selectedClass } = itemProps || {};
+	const { classNameKey, onToggle, isSelected, selectedClass, onSelect } = itemProps || {};
 	const checkboxColumn = onToggle && isSelected ?
 		(<td>
 			<input
@@ -25,7 +25,7 @@ function RowRenderer(props) {
 		isSelected && isSelected(item) && (selectedClass || 'active')
 	);
 	return (
-		<tr id={id} className={classes}>
+		<tr id={id} className={classes} onClick={onSelect ? (event) => onSelect(event, item): null}>
 			{checkboxColumn}
 			{props.columns.map((column, index) => {
 				const isTitle = column.key === titleProps.key;

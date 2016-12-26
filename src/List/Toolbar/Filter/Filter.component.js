@@ -31,7 +31,6 @@ function Filter({ id, onFilter, debounceMinLength, debounceTimeout }) {
 	return (
 		<form
 			className="navbar-form navbar-right"
-			role="search"
 			onSubmit={onSubmit}
 		>
 			<div className="form-group">

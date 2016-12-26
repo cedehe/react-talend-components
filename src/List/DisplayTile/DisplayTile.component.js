@@ -25,12 +25,12 @@ function tileItem(column, value) {
 function Tile({ id, columns, item, itemProps, titleProps }) {
 	let onDoubleClick;
 	let onItemSelect;
-	const { classNameKey, onSelect, onToggle, isSelected, selectedClass } = itemProps || {};
+	const { classNameKey, onClickTitle, onToggle, isSelected, selectedClass } = itemProps || {};
 	if (titleProps.onClick) {
 		onDoubleClick = event => titleProps.onClick(event, item);
 	}
-	if (onSelect) {
-		onItemSelect = event => onSelect(item, event);
+	if (onClickTitle) {
+		onItemSelect = event => onClickTitle(item, event);
 	}
 
 	const checkbox = onToggle && isSelected ?
@@ -133,7 +133,7 @@ const props = {
 		onEditValidate: action('onEditValidate'),
 	},
 	itemProps: {
-		onSelect: action('onSelect'),
+		onClickTitle: action('onClickTitle'),
 		width: '250px'
 	}
 };
