@@ -14,6 +14,10 @@ $primary-color: #77828A !default;
     color: $black;
     font-weight: normal;
 
+    svg {
+      color: $black;
+    }
+
     &.tc-badge-with-icon:hover {
       background: opacify($primary-color, 0.2)
     }
@@ -22,6 +26,7 @@ $primary-color: #77828A !default;
   &.tc-badge-solid {
     background: darken($primary-color, 25%);
     color: $white;
+    border: 1px solid;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     opacity: 0.85;
