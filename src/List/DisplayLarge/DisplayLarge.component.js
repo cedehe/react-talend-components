@@ -66,7 +66,13 @@ function rowRenderer({ id, index, columns, item, itemProps, titleProps }) {
 		null;
 
 	return (
-		<div id={id} className={panel} key={index}>
+		<div
+			id={id}
+			className={panel}
+			key={index}
+			onClick={() => itemProps.onClick(item)}
+			onDoubleClick={() => itemProps.onDoubleClick(item)}
+		>
 			{checkboxColumn}
 			<div className={theme.head}>
 				<ItemTitle

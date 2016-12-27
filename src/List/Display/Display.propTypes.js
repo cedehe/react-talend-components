@@ -9,6 +9,8 @@ export default {
 		classNameKey: PropTypes.string,
 		isSelected: PropTypes.func,
 		onSelect: PropTypes.func,
+		onClick: PropTypes.func,
+		onDoubleClick: PropTypes.func,
 		onToggle: PropTypes.func,
 		onToggleAll: PropTypes.func,
 		width: PropTypes.string,

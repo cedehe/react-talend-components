@@ -72,7 +72,9 @@ function Pagination({ id, startIndex, itemsPerPage, totalResults, itemsPerPageOp
 				<NavItem
 					eventKey={PREV}
 					id={id && `${id}-nav-to-prev`}
-					className={classNames('btn-link', css['tc-pagination-ctrl-prev'], 'tc-pagination-ctrl-prev')}
+					className={classNames('btn-link',
+						css['tc-pagination-ctrl-prev'],
+						'tc-pagination-ctrl-prev')}
 					disabled={startIndex === 1}
 				>
 					<Icon name="fa fa-play" />

@@ -41,6 +41,7 @@ const props = {
 <List {...props}></List>
  */
 function List({ id, displayMode, toolbar, list }) {
+	const { itemProps, titleProps } = list;
 	let displayModeComponent;
 	switch (displayMode) {
 	case 'tile':
@@ -58,6 +59,23 @@ function List({ id, displayMode, toolbar, list }) {
 		break;
 	}
 
+	let isDoubleClick;
+	if (itemProps && itemProps.onSelect) {
+		itemProps.onClick = (item) => {
+			isDoubleClick = false;
+			window.setTimeout(() => {
+				if (!isDoubleClick) {
+					itemProps.onSelect(item);
+				}
+			}, 350);
+		};
+	}
+	if (titleProps && titleProps.onClick) {
+		itemProps.onDoubleClick = (item) => {
+			isDoubleClick = true;
+			titleProps.onClick(item);
+		};
+	}
 	const content = React.createElement(
 		displayModeComponent,
 		{ id, ...list }
