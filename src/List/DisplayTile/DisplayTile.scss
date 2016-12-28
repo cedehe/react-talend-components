@@ -39,6 +39,10 @@ $tile-width: 16em;
 		background: lighten($title-color, 60%);
 		border-color: darken($tile-border-color, 40%);
 	}
+
+	:global(.btn-link:focus) {
+		outline: none;
+	}
 }
 
 .title {
@@ -78,6 +82,7 @@ $tile-width: 16em;
 	&:last-of-type {
 		margin-bottom: 0;
 	}
+
 }
 
 .itemtitle {

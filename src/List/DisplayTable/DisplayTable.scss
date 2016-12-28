@@ -20,6 +20,10 @@ $tc-list-table-hover-color: $black !default;
 		text-decoration: none;
 	}
 
+	:global(.btn-link:focus) {
+		outline: none;
+	}
+
 	tr:hover :global(.btn-group) {
 		visibility: visible;
 	}
@@ -32,5 +36,4 @@ $tc-list-table-hover-color: $black !default;
 		color: $tc-list-table-hover-color;
 		background-color: $tc-list-table-hover-bg;
 	}
-
 }

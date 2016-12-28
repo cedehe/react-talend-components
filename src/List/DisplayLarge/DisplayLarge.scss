@@ -22,6 +22,9 @@ $tc-list-display-large-color: #AAA !default;
 	:global(.tc-actions) {
 		visibility: hidden;
 	}
+	:global(.btn-link:focus) {
+		outline: none;
+	}
 }
 
 .columns {
