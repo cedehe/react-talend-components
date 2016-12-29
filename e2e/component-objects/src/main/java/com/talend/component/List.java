@@ -41,10 +41,7 @@ public class List extends Component {
 
     public WebElement getItemActionButton(String label, String listType, String action) {
         System.out.println(NAME + ".getItemActionButton " + label + " action " + action);
-
         String xpath = "//*[@class='tc-list']//button[text()='" + label + "']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='" + listType + ":" + action + "']";
-        WebElement editBtn = this.getElement().findElement(By.xpath(xpath));
-        return editBtn;
-
+        return this.getElement().findElement(By.xpath(xpath));
     }
 }
