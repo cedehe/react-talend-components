@@ -10,7 +10,7 @@ describe('Badge', () => {
 		// given
 		const props = {
 			label: 'Label 1',
-			tcStyle: 'outline'
+			tcStyle: 'outline',
 		};
 		// when
 		const wrapper = renderer.create(
@@ -25,7 +25,7 @@ describe('Badge', () => {
 			label: 'Label 1',
 			tcStyle: 'outline',
 			showDeleteIcon: true,
-			onDelete: () => {}
+			onDelete: () => {},
 		};
 		// when
 		const wrapper = renderer.create(
@@ -51,7 +51,7 @@ describe('Badge', () => {
 		const props = {
 			label: 'Label 1',
 			showDeleteIcon: true,
-			onDelete: () => {}
+			onDelete: () => {},
 		};
 		// when
 		const wrapper = renderer.create(
