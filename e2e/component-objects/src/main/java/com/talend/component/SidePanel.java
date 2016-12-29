@@ -1,3 +1,5 @@
+package com.talend.component;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
@@ -5,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.Iterator;
 
-class SidePanel extends Component {
+public class SidePanel extends Component {
 
     static final String NAME = "SidePanel";
 

@@ -1,6 +1,8 @@
+package com.talend.component;
+
 import org.openqa.selenium.WebDriver;
 
-class AppHeaderBar extends Component {
+public class AppHeaderBar extends Component {
 
     static final String NAME = "AppHeaderBar";
 
