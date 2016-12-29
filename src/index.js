@@ -73,6 +73,7 @@ import AppHeaderBar from './AppHeaderBar';
 import TalendBadge from './Badge';
 import Breadcrumbs from './Breadcrumbs';
 import CircularProgress from './CircularProgress';
+import CollapsiblePanel from './CollapsiblePanel';
 import ConfirmDialog from './ConfirmDialog';
 import Drawer from './Drawer';
 import TreeView from './TreeView';
@@ -94,6 +95,7 @@ export {
 	AppHeaderBar,
 	Breadcrumbs,
 	CircularProgress,
+	CollapsiblePanel,
 	ConfirmDialog,
 	Drawer,
 	TreeView,
