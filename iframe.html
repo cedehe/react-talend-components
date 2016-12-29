@@ -1,0 +1,36 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+          if (window.parent !== window) {
+            window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+          }
+        </script>
+        <title>React Storybook</title>
+        <link rel="stylesheet" href="https://talend.github.io/bootstrap-theme/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<!-- Storybook should have visible overflow since we have Action Logger -->
+<style>
+    body {
+        overflow-y: auto !important;
+    }
+    .tc-drawer.drawer-custom {
+        background-color: #000;
+        color: White;
+    }
+    .customStyle {
+        background: #ff69b4;
+    }
+</style>
+
+      </head>
+      <body>
+        <div id="root"></div>
+        <div id="error-display"></div>
+        <script src="static/preview.bundle.js"></script>
+      </body>
+    </html>
+  
