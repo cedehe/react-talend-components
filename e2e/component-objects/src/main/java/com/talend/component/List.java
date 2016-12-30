@@ -17,21 +17,28 @@ public class List extends Component {
 
     static final String LIST_SELECTOR = ".tc-list";
 
+    static final String ADD_BTN_SELECTOR = ".btn-success";
+
+    static final String LIST_ITEMS_SELECTOR = ".tc-list-display-table div button";
+
+    static final String ACTION_BTN_ITEM_XPATH = "//*[@class='tc-list']//button[text()='{label}']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='{listType}:{action}']";
+
+
     List(WebDriver driver) {
         super(driver, NAME, LIST_SELECTOR);
     }
 
     public WebElement getAddButton() throws NotFoundException {
-        return this.getElement().findElement(By.cssSelector(".btn-success"));
+        return this.getElement().findElement(By.cssSelector(ADD_BTN_SELECTOR));
     }
 
     public java.util.List<WebElement> getItems() {
-        return this.getElement().findElements(By.cssSelector(".tc-list-display-table div button"));
+        return this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR));
     }
 
     public WebElement getItemFromLabel(String label) {
         System.out.println(NAME + ".getItemFromLabel " + label);
-        Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(".tc-list-display-table div button")).iterator();
+        Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR)).iterator();
 
         while (elements.hasNext()) {
             WebElement el = elements.next();
@@ -45,7 +52,10 @@ public class List extends Component {
 
     public WebElement getItemActionButton(String label, String listType, String action) {
         System.out.println(NAME + ".getItemActionButton " + label + " action " + action);
-        String xpath = "//*[@class='tc-list']//button[text()='" + label + "']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='" + listType + ":" + action + "']";
+
+        String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);
+        xpath = xpath.replace("{listType}", listType);
+        xpath = xpath.replace("{action}", action);
         return this.getElement().findElement(By.xpath(xpath));
     }
 }
