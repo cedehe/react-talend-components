@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 
 import java.util.Iterator;
 
+/**
+ * A List is used to easy access to WebElements of the react-talend-component's List component.
+ *
+ */
 public class List extends Component {
 
     static final String NAME = "List";

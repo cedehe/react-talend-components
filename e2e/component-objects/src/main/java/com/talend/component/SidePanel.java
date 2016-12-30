@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 
 import java.util.Iterator;
 
+/**
+ * SidePanel is used to easy access to WebElements of the react-talend-component's SidePanel component.
+ *
+ */
 public class SidePanel extends Component {
 
     static final String NAME = "SidePanel";

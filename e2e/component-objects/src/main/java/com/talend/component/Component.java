@@ -7,6 +7,10 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+/**
+ * Parent class for API react-talend-component's components.
+ *
+ */
 public class Component {
 
     WebDriver driver;
