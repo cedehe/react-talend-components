@@ -37,12 +37,12 @@ public class List extends Component {
     }
 
     public WebElement getItemFromLabel(String label) {
-        System.out.println(NAME + ".getItemFromLabel " + label);
+        Application.LOGGER.debug(NAME + ".getItemFromLabel " + label);
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR)).iterator();
 
         while (elements.hasNext()) {
             WebElement el = elements.next();
-            System.out.println("while loop : " + el.getText());
+            Application.LOGGER.debug("while loop : " + el.getText());
             if (el.getText().equals(label)) {
                 return el;
             }
@@ -51,7 +51,7 @@ public class List extends Component {
     }
 
     public WebElement getItemActionButton(String label, String listType, String action) {
-        System.out.println(NAME + ".getItemActionButton " + label + " action " + action);
+        Application.LOGGER.debug(NAME + ".getItemActionButton " + label + " action " + action);
 
         String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);
         xpath = xpath.replace("{listType}", listType);
