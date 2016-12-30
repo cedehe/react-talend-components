@@ -17,12 +17,14 @@ public class SidePanel extends Component {
 
     static final String SELECTOR = ".tc-side-panel";
 
+    static final String MENU_ITEMS_SELECTOR = ".tc-side-panel-list-item span";
+
     SidePanel(WebDriver driver) {
         super(driver, NAME, SELECTOR);
     }
 
     WebElement getMenu(String label) throws NotFoundException {
-        Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(".tc-side-panel-list-item span")).iterator();
+        Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(MENU_ITEMS_SELECTOR)).iterator();
         while (elements.hasNext()) {
             WebElement el = elements.next();
             if (el.getText().equals(label)) {
