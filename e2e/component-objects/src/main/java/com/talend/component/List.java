@@ -19,7 +19,7 @@ public class List extends Component {
 
     static final String ADD_BTN_SELECTOR = ".btn-success";
 
-    static final String LIST_ITEMS_SELECTOR = ".tc-list-display-table div button";
+    static final String LIST_ITEMS_SELECTOR = ".tc-list-display-table div:first-child button";
 
     static final String ACTION_BTN_ITEM_XPATH = "//*[@class='tc-list']//button[text()='{label}']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='{listType}:{action}']";
 
