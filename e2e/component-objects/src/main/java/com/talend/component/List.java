@@ -23,19 +23,40 @@ public class List extends Component {
 
     static final String ACTION_BTN_ITEM_XPATH = "//*[@class='tc-list']//button[text()='{label}']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='{listType}:{action}']";
 
-
+    /**
+     * List's constructor
+     *
+     * @param driver Selenium WebDriver
+     */
     List(WebDriver driver) {
         super(driver, NAME, LIST_SELECTOR);
     }
 
+    /**
+     * Get add button of the list
+     *
+     * @return WebElement button
+     * @throws NotFoundException
+     */
     public WebElement getAddButton() throws NotFoundException {
         return this.getElement().findElement(By.cssSelector(ADD_BTN_SELECTOR));
     }
 
+    /**
+     * Get list items
+     *
+     * @return List of WebElement
+     */
     public java.util.List<WebElement> getItems() {
         return this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR));
     }
 
+    /**
+     * Get list item from his label
+     *
+     * @param label label of the item
+     * @return WebElement the item
+     */
     public WebElement getItemFromLabel(String label) {
         Application.LOGGER.debug(NAME + ".getItemFromLabel " + label);
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR)).iterator();
@@ -50,6 +71,14 @@ public class List extends Component {
         throw new NotFoundException(label);
     }
 
+    /**
+     * Get action button of a list item
+     *
+     * @param label label of the list item
+     * @param listType type of elements display in the list
+     * @param action button action
+     * @return WebElement of the action button
+     */
     public WebElement getItemActionButton(String label, String listType, String action) {
         Application.LOGGER.debug(NAME + ".getItemActionButton " + label + " action " + action);
 

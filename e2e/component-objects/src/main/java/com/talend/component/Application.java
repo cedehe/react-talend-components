@@ -19,6 +19,11 @@ public class Application {
 
     public static Logger LOGGER = LogManager.getLogger();
 
+    /**
+     * Application's constructor
+     *
+     * @param driver Selenium WebDriver
+     */
     public Application(WebDriver driver) {
         this.driver = driver;
         this.SidePanel = new SidePanel(driver);

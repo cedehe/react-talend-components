@@ -12,6 +12,11 @@ public class AppHeaderBar extends Component {
 
     static final String SELECTOR = ".tc-app-header-bar";
 
+    /**
+     * AppHeaderBar's constructor
+     *
+     * @param driver Selenium WebDriver
+     */
     AppHeaderBar(WebDriver driver) {
         super(driver, NAME, SELECTOR);
     }

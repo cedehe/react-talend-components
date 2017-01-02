@@ -19,6 +19,13 @@ public class Component {
 
     String name;
 
+    /**
+     * Component's constructor
+     *
+     * @param driver Selenium WebDriver
+     * @param name Component's name
+     * @param selector Component CSS selector
+     */
     Component(WebDriver driver, String name, String selector) {
         Application.LOGGER.debug("Component " + name + " " + selector);
         this.driver = driver;
@@ -26,11 +33,22 @@ public class Component {
         this.selector = selector;
     }
 
+    /**
+     * Get components from component selector
+     *
+     * @return List of WebElement
+     */
     List<WebElement> getElements() {
         Application.LOGGER.debug(this.name + ".getElements " + this.selector);
         return this.driver.findElements(By.cssSelector(this.selector));
     }
 
+    /**
+     * Get component from it's selector
+     *
+     * @return WebElement found with selector
+     * @throws NotFoundException if no elements are found or if more than one element are found
+     */
     WebElement getElement() throws NotFoundException {
         Application.LOGGER.debug(this.name + ".getElement " + this.selector);
         List<WebElement> elements = this.getElements();

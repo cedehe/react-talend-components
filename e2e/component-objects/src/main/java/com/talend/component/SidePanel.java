@@ -19,11 +19,23 @@ public class SidePanel extends Component {
 
     static final String MENU_ITEMS_SELECTOR = ".tc-side-panel-list-item span";
 
+    /**
+     * SidePanel's constructor
+     *
+     * @param driver Selenium WebDriver
+     */
     SidePanel(WebDriver driver) {
         super(driver, NAME, SELECTOR);
     }
 
-    WebElement getMenu(String label) throws NotFoundException {
+    /**
+     * Get menu item from it's label
+     *
+     * @param label item menu's label
+     * @return WebElement of menu's item
+     * @throws NotFoundException if no elements with this label are found
+     */
+    public WebElement getMenu(String label) throws NotFoundException {
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(MENU_ITEMS_SELECTOR)).iterator();
         while (elements.hasNext()) {
             WebElement el = elements.next();
