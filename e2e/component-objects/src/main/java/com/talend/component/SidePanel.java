@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.Iterator;
 
 /**
- * SidePanel is used to easy access to WebElements of the react-talend-component's SidePanel component.
+ * SidePanel is used to easy access to WebElements of the react-talend-component SidePanel component.
  *
  */
 public class SidePanel extends Component {
@@ -20,7 +20,7 @@ public class SidePanel extends Component {
     static final String MENU_ITEMS_SELECTOR = ".tc-side-panel-list-item span";
 
     /**
-     * SidePanel's constructor
+     * SidePanel constructor
      *
      * @param driver Selenium WebDriver
      */
@@ -29,10 +29,10 @@ public class SidePanel extends Component {
     }
 
     /**
-     * Get menu item from it's label
+     * Get menu item from its label
      *
-     * @param label item menu's label
-     * @return WebElement of menu's item
+     * @param label item menu label
+     * @return WebElement of menu item
      * @throws NotFoundException if no elements with this label are found
      */
     public WebElement getMenu(String label) throws NotFoundException {

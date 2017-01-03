@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.Iterator;
 
 /**
- * A List is used to easy access to WebElements of the react-talend-component's List component.
+ * A List is used to easy access to WebElements of the react-talend-component List component.
  *
  */
 public class List extends Component {
@@ -24,7 +24,7 @@ public class List extends Component {
     static final String ACTION_BTN_ITEM_XPATH = "//*[@class='tc-list']//button[text()='{label}']/../following-sibling::div[@class='tc-actions btn-group']/button[@id='{listType}:{action}']";
 
     /**
-     * List's constructor
+     * List constructor
      *
      * @param driver Selenium WebDriver
      */

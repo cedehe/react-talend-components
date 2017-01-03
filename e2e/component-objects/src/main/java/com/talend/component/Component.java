@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 /**
- * Parent class for API react-talend-component's components.
+ * Parent class for API react-talend-component components.
  *
  */
 public class Component {
@@ -20,10 +20,10 @@ public class Component {
     String name;
 
     /**
-     * Component's constructor
+     * Component constructor
      *
      * @param driver Selenium WebDriver
-     * @param name Component's name
+     * @param name Component name
      * @param selector Component CSS selector
      */
     Component(WebDriver driver, String name, String selector) {
@@ -44,7 +44,7 @@ public class Component {
     }
 
     /**
-     * Get component from it's selector
+     * Get component from its selector
      *
      * @return WebElement found with selector
      * @throws NotFoundException if no elements are found or if more than one element are found

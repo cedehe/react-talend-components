@@ -20,7 +20,7 @@ public class Application {
     public static Logger LOGGER = LogManager.getLogger();
 
     /**
-     * Application's constructor
+     * Application constructor
      *
      * @param driver Selenium WebDriver
      */
