@@ -30,8 +30,4 @@ public class Application {
         this.AppHeaderBar = new AppHeaderBar(driver);
         this.List = new List(driver);
     }
-
-    public List getList() {
-        return this.List;
-    }
 }
