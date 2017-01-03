@@ -79,9 +79,11 @@ public class List extends Component {
      * @param action button action
      * @return WebElement of the action button
      */
-    public WebElement getItemActionButton(String label, String listType, String action) {
-        Application.LOGGER.debug(NAME + ".getItemActionButton " + label + " action " + action);
-
+    public WebElement getItemActionButton(String label, String listType, String action) throws Exception {
+        if (label.isEmpty() || listType.isEmpty() || action.isEmpty()) {
+            Application.LOGGER.debug(NAME + ".getItemActionButton " + label + " action " + action);
+            throw new Exception();
+        }
         String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);
         xpath = xpath.replace("{listType}", listType);
         xpath = xpath.replace("{action}", action);
