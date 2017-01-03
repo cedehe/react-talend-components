@@ -38,7 +38,7 @@ public class Component {
      *
      * @return List of WebElement
      */
-    List<WebElement> getElements() {
+    public List<WebElement> getElements() {
         Application.LOGGER.debug(this.name + ".getElements " + this.selector);
         return this.driver.findElements(By.cssSelector(this.selector));
     }
@@ -49,7 +49,7 @@ public class Component {
      * @return WebElement found with selector
      * @throws NotFoundException if no elements are found or if more than one element are found
      */
-    WebElement getElement() throws NotFoundException {
+    public WebElement getElement() throws NotFoundException {
         Application.LOGGER.debug(this.name + ".getElement " + this.selector);
         List<WebElement> elements = this.getElements();
         if (elements.size() == 0) {
