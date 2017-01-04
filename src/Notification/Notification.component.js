@@ -55,7 +55,7 @@ function CloseButton({ notification, leaveFn }) {
 		<Action
 			onClick={() => leaveFn(notification)}
 			label={''}
-			icon={'talend-crossbig'}
+			icon={'talend-cross'}
 			bsClass={classNames(
 				theme['tc-notification-action'], 'tc-notification-action',
 				theme['tc-notification-close'], '.tc-notification-close'
@@ -116,7 +116,7 @@ function Notification({ notification, leaveFn, autoLeaveTimeout }) {
 	};
 	const classes = classNames(notificationClasses);
 	return (
-		<div
+		<div // eslint-disable-line jsx-a11y/no-static-element-interactions
 			role="status"
 			className={classes}
 			onMouseEnter={() => onMouseEnter(notification)}
