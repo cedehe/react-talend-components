@@ -1,5 +1,7 @@
 package com.talend.component;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +14,8 @@ import java.util.Iterator;
  *
  */
 public class SidePanel extends Component {
+
+    public static final Logger LOGGER = LogManager.getLogger(SidePanel.class);
 
     static final String NAME = "SidePanel";
 
@@ -36,6 +40,7 @@ public class SidePanel extends Component {
      * @throws NotFoundException if no elements with this label are found
      */
     public WebElement getMenu(String label) throws NotFoundException {
+        this.LOGGER.info(NAME + ".getMenu " + label);
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(MENU_ITEMS_SELECTOR)).iterator();
         while (elements.hasNext()) {
             WebElement el = elements.next();

@@ -1,5 +1,7 @@
 package com.talend.component;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +14,8 @@ import java.util.Iterator;
  *
  */
 public class List extends Component {
+
+    public static final Logger LOGGER = LogManager.getLogger(List.class);
 
     static final String NAME = "List";
 
@@ -58,12 +62,11 @@ public class List extends Component {
      * @return WebElement the item
      */
     public WebElement getItemFromLabel(String label) {
-        Application.LOGGER.debug(NAME + ".getItemFromLabel " + label);
+        this.LOGGER.info(NAME + ".getItemFromLabel " + label);
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR)).iterator();
 
         while (elements.hasNext()) {
             WebElement el = elements.next();
-            Application.LOGGER.debug("while loop : " + el.getText());
             if (el.getText().equals(label)) {
                 return el;
             }
@@ -81,7 +84,7 @@ public class List extends Component {
      */
     public WebElement getItemActionButton(String label, String listType, String action) throws Exception {
         if (label.isEmpty() || listType.isEmpty() || action.isEmpty()) {
-            Application.LOGGER.debug(NAME + ".getItemActionButton " + label + " action " + action);
+            this.LOGGER.error(NAME + ".getItemActionButton(" + label + ", " + listType + ", " + action + ")");
             throw new Exception();
         }
         String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);

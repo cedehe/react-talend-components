@@ -9,6 +9,8 @@ import org.apache.logging.log4j.Logger;
  */
 public class Application {
 
+    public static final Logger LOGGER = LogManager.getLogger(Application.class);
+
     public WebDriver driver;
 
     public SidePanel SidePanel;
@@ -16,8 +18,6 @@ public class Application {
     public AppHeaderBar AppHeaderBar;
 
     public List List;
-
-    public static Logger LOGGER = LogManager.getLogger();
 
     /**
      * Application constructor
