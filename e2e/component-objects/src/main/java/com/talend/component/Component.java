@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Component {
 
-    public static final Logger LOGGER = LogManager.getLogger(Component.class);
+    private static final Logger LOGGER = LogManager.getLogger(Component.class);
 
     WebDriver driver;
 

@@ -15,7 +15,7 @@ import java.util.Iterator;
  */
 public class List extends Component {
 
-    public static final Logger LOGGER = LogManager.getLogger(List.class);
+    private static final Logger LOGGER = LogManager.getLogger(List.class);
 
     static final String NAME = "List";
 

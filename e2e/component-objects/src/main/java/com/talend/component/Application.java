@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class Application {
 
-    public static final Logger LOGGER = LogManager.getLogger(Application.class);
+    private static final Logger LOGGER = LogManager.getLogger(Application.class);
 
     public WebDriver driver;
 

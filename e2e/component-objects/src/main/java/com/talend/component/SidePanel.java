@@ -15,7 +15,7 @@ import java.util.Iterator;
  */
 public class SidePanel extends Component {
 
-    public static final Logger LOGGER = LogManager.getLogger(SidePanel.class);
+    private static final Logger LOGGER = LogManager.getLogger(SidePanel.class);
 
     static final String NAME = "SidePanel";
 
