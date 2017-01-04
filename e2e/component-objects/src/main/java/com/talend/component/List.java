@@ -83,13 +83,14 @@ public class List extends Component {
      * @return WebElement of the action button
      */
     public WebElement getItemActionButton(String label, String listType, String action) throws Exception {
-        if (label.isEmpty() || listType.isEmpty() || action.isEmpty()) {
+        if (label != null && !label.isEmpty() && listType != null && !listType.isEmpty() && action != null && !action.isEmpty()) {
+            String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);
+            xpath = xpath.replace("{listType}", listType);
+            xpath = xpath.replace("{action}", action);
+            return this.getElement().findElement(By.xpath(xpath));
+        } else {
             this.LOGGER.error(NAME + ".getItemActionButton(" + label + ", " + listType + ", " + action + ")");
-            throw new Exception();
+            throw new Exception("Parameters should not be empty or null!");
         }
-        String xpath = ACTION_BTN_ITEM_XPATH.replace("{label}", label);
-        xpath = xpath.replace("{listType}", listType);
-        xpath = xpath.replace("{action}", action);
-        return this.getElement().findElement(By.xpath(xpath));
     }
 }
