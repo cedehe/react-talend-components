@@ -31,7 +31,7 @@ public class Component {
      * @param selector Component CSS selector
      */
     Component(WebDriver driver, String name, String selector) {
-        this.LOGGER.info("Component " + name + " " + selector);
+        LOGGER.info("Component " + name + " " + selector);
         this.driver = driver;
         this.name = name;
         this.selector = selector;
@@ -43,7 +43,7 @@ public class Component {
      * @return List of WebElement
      */
     public List<WebElement> getElements() {
-        this.LOGGER.info(this.name + ".getElements " + this.selector);
+        LOGGER.info(this.name + ".getElements " + this.selector);
         return this.driver.findElements(By.cssSelector(this.selector));
     }
 
@@ -54,14 +54,14 @@ public class Component {
      * @throws NotFoundException if no elements are found or if more than one element are found
      */
     public WebElement getElement() throws NotFoundException {
-        this.LOGGER.info(this.name + ".getElement " + this.selector);
+        LOGGER.info(this.name + ".getElement " + this.selector);
         List<WebElement> elements = this.getElements();
         if (elements.size() == 0) {
-            this.LOGGER.debug("currentUrl: " + this.driver.getCurrentUrl());
+            LOGGER.debug("currentUrl: " + this.driver.getCurrentUrl());
             throw new NotFoundException(this.name);
         }
         if (elements.size() > 1) {
-            this.LOGGER.debug("currentUrl: " + this.driver.getCurrentUrl());
+            LOGGER.debug("currentUrl: " + this.driver.getCurrentUrl());
             throw new NotFoundException("Too many WebElements found for " + this.name);
         }
         return elements.get(0);

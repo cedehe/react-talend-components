@@ -62,7 +62,7 @@ public class List extends Component {
      * @return WebElement the item
      */
     public WebElement getItemFromLabel(String label) {
-        this.LOGGER.info(NAME + ".getItemFromLabel " + label);
+        LOGGER.info(NAME + ".getItemFromLabel " + label);
         Iterator<WebElement> elements = this.getElement().findElements(By.cssSelector(LIST_ITEMS_SELECTOR)).iterator();
 
         while (elements.hasNext()) {
@@ -89,7 +89,7 @@ public class List extends Component {
             xpath = xpath.replace("{action}", action);
             return this.getElement().findElement(By.xpath(xpath));
         } else {
-            this.LOGGER.error(NAME + ".getItemActionButton(" + label + ", " + listType + ", " + action + ")");
+            LOGGER.error(NAME + ".getItemActionButton(" + label + ", " + listType + ", " + action + ")");
             throw new Exception("Parameters should not be empty or null!");
         }
     }
