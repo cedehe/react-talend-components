@@ -1,5 +1,6 @@
 import './Action';
 import './ActionBar';
+import './Badge';
 import './ActionDropdown';
 import './ActionSplitDropdown';
 import './Actions';
@@ -8,7 +9,9 @@ import './Breadcrumbs';
 import './CircularProgress';
 import './CollapsiblePanel';
 import './ConfirmDialog';
+import './Dialog';
 import './Drawer';
+import './TreeView';
 import './Icon';
 import './Layout';
 import './List';

@@ -70,10 +70,12 @@ import { Action, ActionDropdown, ActionSplitDropdown, Actions } from './Actions'
 import ActionBar from './ActionBar';
 import Notification from './Notification';
 import AppHeaderBar from './AppHeaderBar';
+import TalendBadge from './Badge';
 import Breadcrumbs from './Breadcrumbs';
 import CircularProgress from './CircularProgress';
 import CollapsiblePanel from './CollapsiblePanel';
 import ConfirmDialog from './ConfirmDialog';
+import Dialog from './Dialog';
 import Drawer from './Drawer';
 import TreeView from './TreeView';
 import Icon from './Icon';
@@ -96,9 +98,11 @@ export {
 	Breadcrumbs,
 	CircularProgress,
 	CollapsiblePanel,
+	Dialog,
 	ConfirmDialog,
 	Drawer,
 	TreeView,
+	TalendBadge as Badge,
 	Icon,
 	IconsProvider,
 	Layout,
@@ -111,7 +115,7 @@ export {
 	Typeahead,
 
 	Alert,
-	Badge,
+	Badge as BootstrapBadge,
 	Breadcrumb,
 	BreadcrumbItem,
 	Button,
