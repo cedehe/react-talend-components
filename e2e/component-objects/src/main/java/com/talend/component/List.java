@@ -1,6 +1,5 @@
 package com.talend.component;
 
-import com.thoughtworks.selenium.condition.Not;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
