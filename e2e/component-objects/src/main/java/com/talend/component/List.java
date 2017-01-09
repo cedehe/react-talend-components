@@ -1,5 +1,6 @@
 package com.talend.component;
 
+import com.thoughtworks.selenium.condition.Not;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -92,5 +93,21 @@ public class List extends Component {
             LOGGER.error(NAME + ".getItemActionButton(" + label + ", " + listType + ", " + action + ")");
             throw new Exception("Parameters should not be empty or null!");
         }
+    }
+
+    /**
+     * Test if an item exists
+     * @param name label of the list item
+     * @return true if the item is in the list
+     */
+    public Boolean isItemExist(String name) {
+        Boolean itemExists = true;
+        try {
+            this.getItemFromLabel(name);
+        } catch (NotFoundException e) {
+            itemExists = false;
+        }
+
+        return itemExists;
     }
 }
