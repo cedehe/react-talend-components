@@ -67,7 +67,7 @@ public class List extends Component {
 
         while (elements.hasNext()) {
             WebElement el = elements.next();
-            if (el.getText().toLowerCase().equals(label)) {
+            if (el.getText().equalsIgnoreCase(label)) {
                 return el;
             }
         }
