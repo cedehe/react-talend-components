@@ -1,16 +1,13 @@
 exports[`Item should render 1`] = `
 <div
-  className="tc-list-item"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">
@@ -56,20 +53,22 @@ exports[`Item should render 1`] = `
 
 exports[`Item should render with actions 1`] = `
 <div
-  className="tc-list-item"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
-    className="tc-actions btn-group">
+    className="tc-actions"
+    style={
+      Object {
+        "top": "5px",
+      }
+    }>
     <button
       aria-describedby={42}
       className="btn btn-link"
@@ -86,6 +85,14 @@ exports[`Item should render with actions 1`] = `
         className="fa fa-edit"
         title={null} />
     </button>
+  </div>
+  <div
+    className="tc-actions"
+    style={
+      Object {
+        "top": "35px",
+      }
+    }>
     <button
       aria-describedby={42}
       className="btn btn-link"
@@ -147,17 +154,14 @@ exports[`Item should render with actions 1`] = `
 
 exports[`Item should render with custom selected class 1`] = `
 <div
-  className="tc-list-item selectedClass"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item selectedClass">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">
@@ -203,17 +207,14 @@ exports[`Item should render with custom selected class 1`] = `
 
 exports[`Item should render with id if provided 1`] = `
 <div
-  className="tc-list-item"
-  id="list-item"
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id="list-item-title">
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">
@@ -259,17 +260,14 @@ exports[`Item should render with id if provided 1`] = `
 
 exports[`Item should render with item custom className 1`] = `
 <div
-  className="tc-list-item item-1-class"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item item-1-class">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">
@@ -315,17 +313,14 @@ exports[`Item should render with item custom className 1`] = `
 
 exports[`Item should render with selected item 1`] = `
 <div
-  className="tc-list-item active"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item active">
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">
@@ -371,11 +366,7 @@ exports[`Item should render with selected item 1`] = `
 
 exports[`Item should render with icon 1`] = `
 <div
-  className="tc-list-item"
-  id={undefined}
-  onClick={undefined}
-  onDoubleClick={undefined}
-  role="button">
+  className="tc-list-item">
   <div
     className="tc-list-item-icon">
     <i
@@ -385,10 +376,11 @@ exports[`Item should render with icon 1`] = `
   </div>
   <div
     className="tc-list-item-title">
-    <span
+    <div
+      className="tc-list-item-title-text"
       id={undefined}>
       Bar
-    </span>
+    </div>
   </div>
   <div
     className="tc-list-item-definition-list">

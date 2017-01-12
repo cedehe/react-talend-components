@@ -9,7 +9,7 @@ const ESC_KEY = 27;
 const ENTER_KEY = 13;
 
 function TitleText({ id, value }) {
-	return (<span id={id}>{value}</span>);
+	return (<div id={id} className="tc-list-item-title-text">{value}</div>);
 }
 
 TitleText.propTypes = {
@@ -54,6 +54,7 @@ function TitleInput({ id, value, onChange, onSubmit, onCancel }) {
 		<input
 			type="text"
 			id={id}
+			className="tc-list-item-title-input"
 			value={value}
 			onChange={onChange}
 			onKeyUp={onKeyUp}
@@ -75,7 +76,7 @@ TitleInput.propTypes = {
  * Item title component
  * @param {object} props item title configuration props
  * @example
-const props = {
+ const props = {
 	id: 'my-title',
 	value: 'My Title',
 	display: 'text',              // 'text' | 'button' | 'input'
@@ -84,8 +85,8 @@ const props = {
 	onSubmit: (event) => {},      // input mode validation callback
 	onCancel: (event) => {},      // input mode cancellation callback
 	}
-}
-<ItemTitle {...props} />
+ }
+ <ItemTitle {...props} />
  */
 function ItemTitle(props) {
 	const { display, ...rest } = props;

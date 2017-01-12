@@ -3,28 +3,27 @@ import classNames from 'classnames';
 
 import Item from './Item';
 import Column from './Column.properties';
-import theme from './Items.scss';
+import theme from './Content.scss';
 
-function Items(props) {
+function Content(props) {
 	const {
 		id,
 		displayMode,
 		columns,
+		actions,
 		items,
 		itemProps,
 	} = props;
-	const itemsClasses = classNames(theme['tc-list-items'], 'tc-list-items', theme[displayMode], displayMode);
-	const iconColumn = columns.find(column => column.type === 'icon');
-	const titleColumn = columns.find(column => column.type === 'title');
-	const textColumns = columns.filter(column => !column.type || column.type === 'text');
+	const itemsClasses = classNames(theme['tc-list-content'], 'tc-list-content', theme[displayMode], displayMode);
 	return (
 		<div>
 			<ul className={itemsClasses}>
 				<li className="tc-list-header">
-					{iconColumn && <div className="tc-list-header-item tc-list-header-icon" />}
-					{titleColumn && (<div className="tc-list-header-item tc-list-header-title">{titleColumn.label}</div>)}
-					{textColumns.map((column, index) => (
-						<div key={index} className="tc-list-header-item tc-list-header-text">{column.label}</div>
+					{itemProps.onSelect && itemProps.isSelected && (<div className="tc-list-header-item action" />)}
+					{columns.map((column, index) => (
+						<div key={index} className={classNames('tc-list-header-item', column.type || 'text')}>
+							{column.label}
+						</div>
 					))}
 				</li>
 				{items.map((item, index) => (
@@ -32,6 +31,7 @@ function Items(props) {
 						<Item
 							id={id && `${id}-${index}`}
 							columns={columns}
+							actions={actions}
 							item={item}
 							itemProps={itemProps}
 						/>
@@ -42,18 +42,19 @@ function Items(props) {
 	);
 }
 
-Items.propTypes = {
+Content.propTypes = {
 	id: React.PropTypes.string,
 	displayMode: React.PropTypes.string,
 	columns: React.PropTypes.arrayOf(Column.propTypes).isRequired,
+	actions: Item.propTypes.actions,
 	items: React.PropTypes.arrayOf(React.PropTypes.object),
 	itemProps: Item.propTypes.itemProps,
 };
 
-Items.defaultProps = {
+Content.defaultProps = {
 	items: [],
 	displayMode: 'table',
-	titleProps: { key: 'name' },
+	itemProps: {},
 };
 
-export default Items;
+export default Content;

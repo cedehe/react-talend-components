@@ -1,74 +1,47 @@
-exports[`Items should render 1`] = `
+exports[`Content should render 1`] = `
 <div>
   <ul
-    className="tc-list-items table">
+    className="tc-list-content table">
     <li
       className="tc-list-header">
       <div
-        className="tc-list-header-item tc-list-header-title">
+        className="tc-list-header-item icon">
+        
+      </div>
+      <div
+        className="tc-list-header-item title">
         Name
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Author
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Created
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Modified
       </div>
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-excel-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Hello world
-          </span>
-        </div>
-        <div
-          className="tc-actions btn-group">
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-edit"
-              title={null} />
-          </button>
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-trash-o"
-              title={null} />
-          </button>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -113,17 +86,21 @@ exports[`Items should render 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-pdf-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Foo
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -168,17 +145,16 @@ exports[`Items should render 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon" />
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Bar
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -225,77 +201,50 @@ exports[`Items should render 1`] = `
 </div>
 `;
 
-exports[`Items should render with display mode if provided 1`] = `
+exports[`Content should render with display mode if provided 1`] = `
 <div>
   <ul
-    className="tc-list-items tile">
+    className="tc-list-content tile">
     <li
       className="tc-list-header">
       <div
-        className="tc-list-header-item tc-list-header-title">
+        className="tc-list-header-item icon">
+        
+      </div>
+      <div
+        className="tc-list-header-item title">
         Name
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Author
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Created
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Modified
       </div>
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-excel-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Hello world
-          </span>
-        </div>
-        <div
-          className="tc-actions btn-group">
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-edit"
-              title={null} />
-          </button>
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-trash-o"
-              title={null} />
-          </button>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -340,17 +289,21 @@ exports[`Items should render with display mode if provided 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-pdf-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Foo
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -395,17 +348,16 @@ exports[`Items should render with display mode if provided 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id={undefined}
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon" />
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id={undefined}>
             Bar
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -452,77 +404,50 @@ exports[`Items should render with display mode if provided 1`] = `
 </div>
 `;
 
-exports[`Items should render with id if provided 1`] = `
+exports[`Content should render with id if provided 1`] = `
 <div>
   <ul
-    className="tc-list-items table">
+    className="tc-list-content table">
     <li
       className="tc-list-header">
       <div
-        className="tc-list-header-item tc-list-header-title">
+        className="tc-list-header-item icon">
+        
+      </div>
+      <div
+        className="tc-list-header-item title">
         Name
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Author
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Created
       </div>
       <div
-        className="tc-list-header-item tc-list-header-text">
+        className="tc-list-header-item text">
         Modified
       </div>
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id="list-items-0"
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-excel-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id="list-items-0-title">
             Hello world
-          </span>
-        </div>
-        <div
-          className="tc-actions btn-group">
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-edit"
-              title={null} />
-          </button>
-          <button
-            aria-describedby={42}
-            className="btn btn-link"
-            disabled={false}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-            role="link"
-            type="button">
-            <i
-              aria-hidden="true"
-              className="fa fa-trash-o"
-              title={null} />
-          </button>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -567,17 +492,21 @@ exports[`Items should render with id if provided 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id="list-items-1"
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon">
+          <i
+            aria-hidden="true"
+            className="fa fa-file-pdf-o"
+            title={null} />
+        </div>
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id="list-items-1-title">
             Foo
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">
@@ -622,17 +551,16 @@ exports[`Items should render with id if provided 1`] = `
     </li>
     <li>
       <div
-        className="tc-list-item"
-        id="list-items-2"
-        onClick={undefined}
-        onDoubleClick={undefined}
-        role="button">
+        className="tc-list-item">
+        <div
+          className="tc-list-item-icon" />
         <div
           className="tc-list-item-title">
-          <span
+          <div
+            className="tc-list-item-title-text"
             id="list-items-2-title">
             Bar
-          </span>
+          </div>
         </div>
         <div
           className="tc-list-item-definition-list">

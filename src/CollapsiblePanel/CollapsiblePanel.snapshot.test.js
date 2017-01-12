@@ -40,16 +40,19 @@ const props = {
 			bsStyle: 'default',
 			tooltipPlacement: 'top',
 		},
-		{
-			label: 'on TDP',
-			bsStyle: 'default',
-			tooltipPlacement: 'top',
-		},
-		{
-			label: 'XML',
-			bsStyle: 'default',
-			tooltipPlacement: 'top',
-		},
+		[
+			{
+				label: 'on TDP',
+				bsStyle: 'default',
+				tooltipPlacement: 'top',
+			},
+			{
+				displayMode: 'badge',
+				label: 'XML',
+				bsStyle: 'default',
+				tooltipPlacement: 'top',
+			},
+		],
 	],
 	content: [
 		{

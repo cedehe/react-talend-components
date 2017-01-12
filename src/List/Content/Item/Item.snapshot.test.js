@@ -21,12 +21,14 @@ const item = {
 };
 const actions = [
 	{
-		label: 'edit',
+		key: 'edit',
+		label: 'Edit',
 		icon: 'fa fa-edit',
 		onClick: jest.fn(),
 	},
 	{
-		label: 'delete',
+		key: 'delete',
+		label: 'Delete',
 		icon: 'fa fa-trash-o',
 		onClick: jest.fn(),
 	},
@@ -113,7 +115,8 @@ describe('Item', () => {
 	it('should render with actions', () => {
 		// given
 		const props = {
-			item: Object.assign({}, item, { actions }),
+			item,
+			actions,
 			columns,
 		};
 
@@ -128,7 +131,7 @@ describe('Item', () => {
 		// given
 		const props = {
 			item,
-			columns: [...columns, { key: 'icon', label: '', type: 'icon' }],
+			columns: [{ key: 'icon', label: '', type: 'icon' }, ...columns],
 		};
 
 		// when

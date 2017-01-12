@@ -1,6 +1,10 @@
 import React, { PropTypes } from 'react';
 import Toolbar from './Toolbar';
-import Items from './Items';
+import DisplayPropTypes from './Display/Display.propTypes';
+import DisplayLarge from './DisplayLarge';
+import DisplayTable from './DisplayTable';
+import DisplayTile from './DisplayTile';
+import Content from './Content';
 
 /**
  * @param {object} props react props
@@ -37,7 +41,21 @@ const props = {
 }
 <List {...props}></List>
  */
-function List({ id, displayMode, toolbar, list }) {
+function List({ id, displayMode, toolbar, list, useContent }) {
+	const getDisplayModeComponent = () => {
+		switch (displayMode) {
+		case 'tile':
+			return <DisplayTile id={id} {...list} />;
+		case 'large':
+			return <DisplayLarge id={id} {...list} />;
+		default:
+			return <DisplayTable id={id} {...list} />;
+		}
+	};
+	const getContent = () => (
+		<Content id={id && `${id}-content`} displayMode={displayMode} {...list} />
+	);
+
 	let toolbarProps;
 	if (toolbar) {
 		toolbarProps = Object.assign({}, toolbar, { id });
@@ -56,7 +74,7 @@ function List({ id, displayMode, toolbar, list }) {
 	return (
 		<div className="tc-list">
 			{toolbar && (<Toolbar {...toolbarProps} />)}
-			<Items id={id} displayMode={displayMode} {...list} />
+			{useContent ? getContent() : getDisplayModeComponent()}
 		</div>
 	);
 }
@@ -64,12 +82,17 @@ function List({ id, displayMode, toolbar, list }) {
 List.propTypes = {
 	id: PropTypes.string,
 	displayMode: PropTypes.string,
-	list: PropTypes.shape(Items.propTypes),
+	list: PropTypes.oneOfType([
+		PropTypes.shape(DisplayPropTypes),
+		PropTypes.shape(Content.propTypes),
+	]),
 	toolbar: PropTypes.shape(Toolbar.propTypes),
+	useContent: PropTypes.bool,
 };
 
 List.defaultProps = {
 	displayMode: 'table',
+	useContent: false,
 };
 
 export default List;

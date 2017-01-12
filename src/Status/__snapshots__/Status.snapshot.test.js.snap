@@ -1,12 +1,7 @@
 exports[`Status should render a label 1`] = `
 <div
   className="tc-status text-success undefined">
-  <span
-    className={undefined}>
-     
-    
-     
-  </span>
+  
   <span
     className="tc-status-label">
      
@@ -53,15 +48,10 @@ exports[`Status should render a label 1`] = `
 exports[`Status should render a label with Icon 1`] = `
 <div
   className="tc-status text-success undefined">
-  <span
-    className={undefined}>
-     
-    <i
-      aria-hidden="true"
-      className="fa fa-check"
-      title={null} />
-     
-  </span>
+  <i
+    aria-hidden="true"
+    className="fa fa-check"
+    title={null} />
   <span
     className="tc-status-label">
      
@@ -108,15 +98,10 @@ exports[`Status should render a label with Icon 1`] = `
 exports[`Status should render a label with Icon without actions 1`] = `
 <div
   className="tc-status text-success">
-  <span
-    className={undefined}>
-     
-    <i
-      aria-hidden="true"
-      className="fa fa-check"
-      title={null} />
-     
-  </span>
+  <i
+    aria-hidden="true"
+    className="fa fa-check"
+    title={null} />
   <span
     className="tc-status-label">
      
@@ -127,6 +112,120 @@ exports[`Status should render a label with Icon without actions 1`] = `
     className={undefined}>
     <div
       className="tc-actions btn-group" />
+  </span>
+</div>
+`;
+
+exports[`Status should render a label with a continuous circular progress 1`] = `
+<div
+  className="tc-status text-info undefined">
+  <svg
+    className=""
+    viewBox="0 0 50 50">
+    <circle
+      className={undefined}
+      cx={25}
+      cy={25}
+      fill="none"
+      r={20}
+      style={undefined} />
+  </svg>
+  <span
+    className="tc-status-label">
+     
+    In Progress
+     
+  </span>
+  <span
+    className={undefined}>
+    <div
+      className="tc-actions btn-group">
+      <button
+        className="btn btn-sm btn-default"
+        disabled={false}
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-cancel"
+          title={null} />
+        <span>
+          cancel
+        </span>
+      </button>
+      <button
+        className="btn btn-sm btn-default"
+        disabled={false}
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-delete"
+          title={null} />
+        <span>
+          delete
+        </span>
+      </button>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`Status should render a label with a fixed circular progress 1`] = `
+<div
+  className="tc-status text-info undefined">
+  <svg
+    className=""
+    viewBox="0 0 50 50">
+    <circle
+      className={undefined}
+      cx={25}
+      cy={25}
+      fill="none"
+      r={20}
+      style={undefined} />
+  </svg>
+  <span
+    className="tc-status-label">
+     
+    In Progress
+     
+  </span>
+  <span
+    className={undefined}>
+    <div
+      className="tc-actions btn-group">
+      <button
+        className="btn btn-sm btn-default"
+        disabled={false}
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-cancel"
+          title={null} />
+        <span>
+          cancel
+        </span>
+      </button>
+      <button
+        className="btn btn-sm btn-default"
+        disabled={false}
+        onClick={[Function]}
+        role={null}
+        type="button">
+        <i
+          aria-hidden="true"
+          className="fa fa-delete"
+          title={null} />
+        <span>
+          delete
+        </span>
+      </button>
+    </div>
   </span>
 </div>
 `;

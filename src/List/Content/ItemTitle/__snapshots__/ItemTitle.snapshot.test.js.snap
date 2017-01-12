@@ -19,6 +19,7 @@ exports[`ItemTitle should render input title 1`] = `
   className="tc-list-item-title">
   <input
     autoFocus={true}
+    className="tc-list-item-title-input"
     id="title"
     onBlur={[Function]}
     onChange={[Function]}
@@ -31,9 +32,10 @@ exports[`ItemTitle should render input title 1`] = `
 exports[`ItemTitle should render text title 1`] = `
 <div
   className="tc-list-item-title">
-  <span
+  <div
+    className="tc-list-item-title-text"
     id="title">
     Hello world
-  </span>
+  </div>
 </div>
 `;
